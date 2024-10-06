@@ -6,26 +6,26 @@
 
 int main()
 {
-  printf("#################### \n");
-  printf("\n");
-  printf("Dobro dosli u jednostavan calculator \n");
-  printf("\n");
-  printf("#################### \n");
+  int firstNumber;
+  float secondNumber;
+  char someWord[30];
 
-  int firstNum = 13;
-  int secondNum = 5;
+  printf("Enter first num: \n");
+  scanf("%d", &firstNumber);
 
-  int add = firstNum + secondNum;
-  int sub = firstNum - secondNum;
-  int mul = firstNum * secondNum;
-  int div = firstNum / secondNum;
-  int rem = firstNum % secondNum;
+  printf("Enter second num: \n");
+  scanf("%f", &secondNumber);
 
-  printf("Add: %d \n", add);
-  printf("Sub: %d \n", sub);
-  printf("Mul: %d \n", mul);
-  printf("Div: %d \n", div);
-  printf("Rem: %d \n", rem);
+  printf("Enter Some Word: \n");
+  scanf("%s", &someWord);
+
+  printf("###################### \n");
+
+  printf("First num: %d \n", firstNumber);
+  printf("Second num: %d \n", secondNumber);
+  printf("Some Word : %s \n", someWord);
+
+  printf("###################### \n");
 
   return 0;
 }
