@@ -6,26 +6,28 @@
 
 int main()
 {
-  int firstNumber;
-  float secondNumber;
-  char someWord[30];
+  int first;
+  int second;
 
-  printf("Enter first num: \n");
-  scanf("%d", &firstNumber);
+  printf("Please, enter first num: ");
+  scanf("%d", &first);
 
-  printf("Enter second num: \n");
-  scanf("%f", &secondNumber);
+  printf("Please, enter second num: ");
+  scanf("%d", &second);
 
-  printf("Enter Some Word: \n");
-  scanf("%s", &someWord);
-
-  printf("###################### \n");
-
-  printf("First num: %d \n", firstNumber);
-  printf("Second num: %d \n", secondNumber);
-  printf("Some Word : %s \n", someWord);
-
-  printf("###################### \n");
+  if (first < second)
+  {
+    printf("%d is smaller than %d", first, second);
+  }
+  else if (first > second)
+  {
+    printf("%d is larger than %d", first, second);
+  }
+  else {
+    printf("%d is equal to %d", first, second);
+  }
+  
+  
 
   return 0;
 }
