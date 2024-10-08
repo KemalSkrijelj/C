@@ -6,28 +6,34 @@
 
 int main()
 {
-  int first;
-  int second;
+  printf("1 - Start Game \n");
+  printf("2 - Audio Settings \n");
+  printf("3 - Video Settings \n");
+  printf("################### \n");
 
-  printf("Please, enter first num: ");
-  scanf("%d", &first);
+  int choice;
 
-  printf("Please, enter second num: ");
-  scanf("%d", &second);
+  printf("Enter choice: \n");
+  scanf("%d", &choice);
 
-  if (first < second)
+  switch (choice)
   {
-    printf("%d is smaller than %d", first, second);
+  case 1:
+    printf("Game Started \n");
+    break;
+  case 2: 
+    printf("Audio Settings open \n");
+    break;
+  case 3:
+    printf("Video Settings open \n");
+    break;
+  default:
+    printf("---------------------- \n");
+    printf("Check your input \n");
+    printf("1-Start, 2-Audio, 3-Video \n");
+    printf("---------------------- \n");
+    break;
   }
-  else if (first > second)
-  {
-    printf("%d is larger than %d", first, second);
-  }
-  else {
-    printf("%d is equal to %d", first, second);
-  }
-  
-  
 
   return 0;
 }
