@@ -6,34 +6,27 @@
 
 int main()
 {
-  printf("1 - Start Game \n");
-  printf("2 - Audio Settings \n");
-  printf("3 - Video Settings \n");
-  printf("################### \n");
-
-  int choice;
-
-  printf("Enter choice: \n");
-  scanf("%d", &choice);
-
-  switch (choice)
+  int x = 0;
+  do
   {
-  case 1:
-    printf("Game Started \n");
-    break;
-  case 2: 
-    printf("Audio Settings open \n");
-    break;
-  case 3:
-    printf("Video Settings open \n");
-    break;
-  default:
-    printf("---------------------- \n");
-    printf("Check your input \n");
-    printf("1-Start, 2-Audio, 3-Video \n");
-    printf("---------------------- \n");
-    break;
-  }
+    printf("x in this moment of time: %d \n", x);
+    x++;
+  } while (x < 20);
+  
 
+  // int x = 0;
+
+  // while (x < 10)
+  // {
+  //   printf("x in this moment of time: %d \n", x);
+  //   x++;
+  // }
+  // int x;
+  
+  // for (x = 0; x <= 10; x++)
+  // {
+  //   printf("X at the moment: %d \n", x);
+  // }
+  
   return 0;
 }
