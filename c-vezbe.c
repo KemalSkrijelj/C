@@ -6,19 +6,35 @@
 
 int main()
 {
+  int someNumbers[] = {5,25,100, 500};
+  char someChars[] = {'A', 'B','C'};
+
   int x = 0;
-  
-  while (x <= 10)
+
+  for (x; x < 4; x++)
   {
-    if (x == 7)
-    {
-      x++;
-      continue;
-    }
+    printf("Number: %d \n", someNumbers[x]);
+  };
     
-     printf("X je u ovom momentu broj - %d \n", x);
-     x++;
-  }
+  // printf("Number: %d \n", someNumbers[0]);
+  // printf("Number: %d \n", someNumbers[1]);
+  // printf("Number: %d \n", someNumbers[3]);
+
+  // someChars[0] ='K';
+  // printf("Number: %c \n", someChars[0]);
+
+  return 0;
+}
+  // while (x <= 10)
+  // {
+  //   if (x == 7)
+  //   {
+  //     x++;
+  //     continue;
+  //   }
+    
+  //    printf("X je u ovom momentu broj - %d \n", x);
+  //    x++;
   
   // int x;
   // for ( x = 0; x < 10; x++)
@@ -51,5 +67,5 @@ int main()
   //   printf("X at the moment: %d \n", x);
   // }
   
-  return 0;
-}
+  // return 0;
+// }
