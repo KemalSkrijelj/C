@@ -6,15 +6,33 @@
 
 int main()
 {
-  int someNumbers[] = {5,25,100, 500};
-  char someChars[] = {'A', 'B','C'};
+  char someString[] = "Hack the Planet";
 
-  int x = 0;
+  printf("Some string: %s \n", someString); 
+  printf("Value: %c \n", someString[0]);// [] koristimo da bi nam printf bilo neko slovo
+  
+  someString[0] = 'W'; //Izmena slova u recenici
+  printf("Value: %c \n", someString[0]);
 
-  for (x; x < 4; x++)
+  printf("String size: %d \n", sizeof(someString));
+  
+  //For petlja za svako slovo
+  for (int x = 0; x < sizeof(someString); x++)
   {
-    printf("Number: %d \n", someNumbers[x]);
-  };
+    printf("Char atm: %c \n", someString[x]);
+  }
+  
+  return 0;
+}
+  // int someNumbers[] = {5,25,100, 500};
+  // char someChars[] = {'A', 'B','C'};
+
+  // int x = 0;
+
+  // for (x; x < 4; x++)
+  // {
+  //   printf("Number: %d \n", someNumbers[x]);
+  // };
     
   // printf("Number: %d \n", someNumbers[0]);
   // printf("Number: %d \n", someNumbers[1]);
@@ -23,8 +41,7 @@ int main()
   // someChars[0] ='K';
   // printf("Number: %c \n", someChars[0]);
 
-  return 0;
-}
+
   // while (x <= 10)
   // {
   //   if (x == 7)
