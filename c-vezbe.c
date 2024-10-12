@@ -6,19 +6,38 @@
 
 int main()
 {
-  int number = 10;
-  printf("Vrednost preko varijable: %d \n", number);
+  int orginal = 5;
 
-  printf("Prava hardverska adresa: %p \n", &number);
+  int * priPointer = &orginal;
+  int ** secondPointer = &priPointer;
 
-  int * ptrNumber = &number;//Kada pravimo pointer koristimo *
+  printf("Preko orginala: %d \n", orginal);
+  printf("Vrednost preko pointera: %d \n", *priPointer);
 
-  printf("Pointer: %p \n", ptrNumber);//Adresa kontejnera
+  printf("Hardverska adresa varijable %p \n", priPointer);
+  printf("Hardverska adresa direktno: %p \n", &orginal);
 
-  printf("Vrednost preko pointera: %d \n", *ptrNumber);//Kad ga izvalcimo isto koristimo *
+  printf("Adresa primarnog pointera preko sekundarnog pointera %p \n", secondPointer);
+  printf("Adresa primarnog pointera bez pravljenja sekundarnog pointera: %p \n", &priPointer);
 
+  printf("Vrednost preko sekundarnog pointera: %d \n", **secondPointer);
+  
   return 0; 
 }
+
+  /* ************************ */
+  // int number = 10;
+  // printf("Vrednost preko varijable: %d \n", number);
+
+  // printf("Prava hardverska adresa: %p \n", &number);
+
+  // int * ptrNumber = &number;//Kada pravimo pointer koristimo *
+
+  // printf("Pointer: %p \n", ptrNumber);//Adresa kontejnera
+
+  // printf("Vrednost preko pointera: %d \n", *ptrNumber);//Kad ga izvalcimo isto koristimo *
+
+    /* ************************ */
   // char someString[] = "Hack the Planet";
 
   // printf("Some string: %s \n", someString); 
