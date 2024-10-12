@@ -6,24 +6,36 @@
 
 int main()
 {
-  char someString[] = "Hack the Planet";
+  int number = 10;
+  printf("Vrednost preko varijable: %d \n", number);
 
-  printf("Some string: %s \n", someString); 
-  printf("Value: %c \n", someString[0]);// [] koristimo da bi nam printf bilo neko slovo
-  
-  someString[0] = 'W'; //Izmena slova u recenici
-  printf("Value: %c \n", someString[0]);
+  printf("Prava hardverska adresa: %p \n", &number);
 
-  printf("String size: %d \n", sizeof(someString));
-  
-  //For petlja za svako slovo
-  for (int x = 0; x < sizeof(someString); x++)
-  {
-    printf("Char atm: %c \n", someString[x]);
-  }
-  
-  return 0;
+  int * ptrNumber = &number;//Kada pravimo pointer koristimo *
+
+  printf("Pointer: %p \n", ptrNumber);//Adresa kontejnera
+
+  printf("Vrednost preko pointera: %d \n", *ptrNumber);//Kad ga izvalcimo isto koristimo *
+
+  return 0; 
 }
+  // char someString[] = "Hack the Planet";
+
+  // printf("Some string: %s \n", someString); 
+  // printf("Value: %c \n", someString[0]);// [] koristimo da bi nam printf bilo neko slovo
+  
+  // someString[0] = 'W'; //Izmena slova u recenici
+  // printf("Value: %c \n", someString[0]);
+
+  // printf("String size: %d \n", sizeof(someString));
+
+  // //For petlja za svako slovo
+  // for (int x = 0; x < sizeof(someString); x++)
+  // {
+  //   printf("Char atm: %c \n", someString[x]);
+  // }
+  
+  /* ************************ */
   // int someNumbers[] = {5,25,100, 500};
   // char someChars[] = {'A', 'B','C'};
 
@@ -41,7 +53,7 @@ int main()
   // someChars[0] ='K';
   // printf("Number: %c \n", someChars[0]);
 
-
+ /* ************************ */
   // while (x <= 10)
   // {
   //   if (x == 7)
@@ -52,7 +64,8 @@ int main()
     
   //    printf("X je u ovom momentu broj - %d \n", x);
   //    x++;
-  
+
+   /* ************************ */
   // int x;
   // for ( x = 0; x < 10; x++)
   // {
@@ -62,14 +75,16 @@ int main()
   //   }
   //   printf("Ovo su brojevi %d \n", x);
   // }
-  
+
+   /* ************************ */
   // int x = 0;
   // do
   // {
   //   printf("x in this moment of time: %d \n", x);
   //   x++;
   // } while (x < 20);
-  
+
+   /* ************************ */
   // int x = 0;
 
   // while (x < 10)
