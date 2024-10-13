@@ -1,29 +1,58 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // #define STATICNUMBER 200  //nacin definisanje constate
 
 // const int staticNum = 500;
 
-int main()
-{
-  int orginal = 5;
+void someFunction() {
+  printf("I am from some function \n");
+}
 
-  int * priPointer = &orginal;
-  int ** secondPointer = &priPointer;
+void callerMITM() {
+  someFunction();
+  someFunction();
+  someFunction();
+}
 
-  printf("Preko orginala: %d \n", orginal);
-  printf("Vrednost preko pointera: %d \n", *priPointer);
+void simpleCalc() {
+  int x = 10;
+  int y = 20;
+  int result = x + y; 
 
-  printf("Hardverska adresa varijable %p \n", priPointer);
-  printf("Hardverska adresa direktno: %p \n", &orginal);
+  printf("--------------- \n");
+  printf("Result: %d \n", result);
+  printf("--------------- \n");
+}
 
-  printf("Adresa primarnog pointera preko sekundarnog pointera %p \n", secondPointer);
-  printf("Adresa primarnog pointera bez pravljenja sekundarnog pointera: %p \n", &priPointer);
+void pingGoogle() {
+  system("ping google.com");
+}
 
-  printf("Vrednost preko sekundarnog pointera: %d \n", **secondPointer);
-  
+int main(){
+  simpleCalc();
+  pingGoogle();
   return 0; 
 }
+
+  /* ************************ */
+
+  // int orginal = 5;
+
+  // int * priPointer = &orginal;
+  // int ** secondPointer = &priPointer;
+
+  // printf("Preko orginala: %d \n", orginal);
+  // printf("Vrednost preko pointera: %d \n", *priPointer);
+
+  // printf("Hardverska adresa varijable %p \n", priPointer);
+  // printf("Hardverska adresa direktno: %p \n", &orginal);
+
+  // printf("Adresa primarnog pointera preko sekundarnog pointera %p \n", secondPointer);
+  // printf("Adresa primarnog pointera bez pravljenja sekundarnog pointera: %p \n", &priPointer);
+
+  // printf("Vrednost preko sekundarnog pointera: %d \n", **secondPointer);
+  
 
   /* ************************ */
   // int number = 10;
