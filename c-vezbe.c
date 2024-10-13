@@ -1,31 +1,71 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // #define STATICNUMBER 200  //nacin definisanje constate
 
 // const int staticNum = 500;
-void simpleCalc(int x, int y){
-  printf("Vrednost x: %d \n", x);
-  printf("Vrednost y: %d \n", y);
 
-  int addition = x + y;
-  printf("-----------\n");
-  printf("Addition: %d \n", addition);
-}
-
-void charFormat(char a, char b) {
-  printf("####### %c ####### \n", a);
-  printf("####### %c ####### \n", b);
-}
-
+struct Books {
+  char Title[50];//Max 50
+  char Author[50];
+  char Topic[100];
+  int id_book;
+};
 int main(){
-  simpleCalc(5,10);
-  charFormat('K', 'S');
+
+  struct Books Book_1;
+  strcpy(Book_1.Title, "Teorija C"); //Korisitimo za strignove
+  strcpy(Book_1.Author, "Kemal");
+  strcpy(Book_1.Topic, "C");
+  Book_1.id_book = 221;
+
+  printf("Title: %s \n", Book_1.Title);
+  printf("Author: %s \n", Book_1.Author);
+  printf("Topic: %s \n", Book_1.Topic);
+  printf("Id of Book: %d \n", Book_1.id_book);
+
   return 0; 
 }
 
   /* ************************ */
 //Funkcije
+
+// int exportFunc (int x, int y) {
+//   int addition = x + y;
+//   return addition;
+// }
+// int simpleMulti() {
+//   int x,y;
+
+//   printf("Unesi x: \n");
+//   scanf("%d", &x);
+
+//   printf("Unesi y: \n");
+//   scanf("%d", &y);
+
+//   int multiplication = x * y;
+
+//   return multiplication;
+// }
+
+/*------------------------------*/
+
+// void simpleCalc(int x, int y){
+//   printf("Vrednost x: %d \n", x);
+//   printf("Vrednost y: %d \n", y);
+
+//   int addition = x + y;
+//   printf("-----------\n");
+//   printf("Addition: %d \n", addition);
+// }
+
+// void charFormat(char a, char b) {
+//   printf("####### %c ####### \n", a);
+//   printf("####### %c ####### \n", b);
+// }
+
+/*-----------------------*/
 
 // void someFunction() {
 //   printf("I am from some function \n");
