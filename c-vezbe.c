@@ -4,36 +4,52 @@
 // #define STATICNUMBER 200  //nacin definisanje constate
 
 // const int staticNum = 500;
+void simpleCalc(int x, int y){
+  printf("Vrednost x: %d \n", x);
+  printf("Vrednost y: %d \n", y);
 
-void someFunction() {
-  printf("I am from some function \n");
+  int addition = x + y;
+  printf("-----------\n");
+  printf("Addition: %d \n", addition);
 }
 
-void callerMITM() {
-  someFunction();
-  someFunction();
-  someFunction();
-}
-
-void simpleCalc() {
-  int x = 10;
-  int y = 20;
-  int result = x + y; 
-
-  printf("--------------- \n");
-  printf("Result: %d \n", result);
-  printf("--------------- \n");
-}
-
-void pingGoogle() {
-  system("ping google.com");
+void charFormat(char a, char b) {
+  printf("####### %c ####### \n", a);
+  printf("####### %c ####### \n", b);
 }
 
 int main(){
-  simpleCalc();
-  pingGoogle();
+  simpleCalc(5,10);
+  charFormat('K', 'S');
   return 0; 
 }
+
+  /* ************************ */
+//Funkcije
+
+// void someFunction() {
+//   printf("I am from some function \n");
+// }
+
+// void callerMITM() {
+//   someFunction();
+//   someFunction();
+//   someFunction();
+// }
+
+// void simpleCalc() {
+//   int x = 10;
+//   int y = 20;
+//   int result = x + y; 
+
+//   printf("--------------- \n");
+//   printf("Result: %d \n", result);
+//   printf("--------------- \n");
+// }
+
+// void pingGoogle() {
+//   system("ping google.com");
+// }
 
   /* ************************ */
 
