@@ -6,30 +6,48 @@
 
 // const int staticNum = 500;
 
-
-typedef char Character;
-typedef char Longlines[];
-typedef int Sizes;
+union Rectangle{
+  int x;
+  int y;
+  char name [50];
+};
 
 int main(){
+  union Rectangle first;
 
-  Character onlyOne = 'A';
-  printf("%c \n", onlyOne);
+  first.x = 10;//U unionu da bi dobili vrednost koju smo iskucali, moramo odma nakon nje da je printf(), inace cemo dobiti random br
+  printf("%d \n", first.x);
 
-  Longlines headerStart = {"---------------------- \n"};
-  printf("%s \n", headerStart);
+  first.y = 20;
+  printf("%d \n", first.y);
 
-  Sizes newSize = 10;
-  Sizes l = 20;
-
-  int area = newSize * l;
-  printf("Area: %d \n", area);
-  printf("%s \n", headerStart);
-
+  strcpy(first.name, "First Name");
+  printf("Name: %s \n", first.name);
 
 
   return 0; 
 }
+
+/*--------------------------*/
+//Typedef
+
+// typedef char Character;
+// typedef char Longlines[];
+// typedef int Sizes;
+
+  //U main-u
+  // Character onlyOne = 'A';
+  // printf("%c \n", onlyOne);
+
+  // Longlines headerStart = {"---------------------- \n"};
+  // printf("%s \n", headerStart);
+
+  // Sizes newSize = 10;
+  // Sizes l = 20;
+
+  // int area = newSize * l;
+  // printf("Area: %d \n", area);
+  // printf("%s \n", headerStart);
 
 /*-----------------------------------*/
 //Strukture
@@ -41,6 +59,7 @@ int main(){
 //   int id_book;
 // } genericBook;
 
+  //U main-u
   // struct Books Book_1;
   // strcpy(Book_1.Title, "Teorija C"); //Korisitimo za strignove
   // strcpy(Book_1.Author, "Kemal");
