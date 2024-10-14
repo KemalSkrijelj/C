@@ -6,29 +6,44 @@
 
 // const int staticNum = 500;
 
-union Rectangle{
+void getOneChar() {
   int x;
-  int y;
-  char name [50];
+
+  printf("Enter character: \n");
+  x = getchar();
+
+  printf("You entered: \n");
+  putchar(x);
 };
 
 int main(){
-  union Rectangle first;
 
-  first.x = 10;//U unionu da bi dobili vrednost koju smo iskucali, moramo odma nakon nje da je printf(), inace cemo dobiti random br
-  printf("%d \n", first.x);
-
-  first.y = 20;
-  printf("%d \n", first.y);
-
-  strcpy(first.name, "First Name");
-  printf("Name: %s \n", first.name);
-
+  getOneChar();
 
   return 0; 
 }
 
+/*------------------------*/
+// union Rectangle{
+//   int x;
+//   int y;
+//   char name [50];
+// };
+
+//U main-u
+// union Rectangle first; //Davanje imena
+
+// first.x = 10;//U unionu da bi dobili vrednost koju smo iskucali, moramo odma nakon nje da je printf(), inace cemo dobiti random br
+// printf("%d \n", first.x);
+
+// first.y = 20;
+// printf("%d \n", first.y);
+
+// strcpy(first.name, "First Name");
+// printf("Name: %s \n", first.name);
+
 /*--------------------------*/
+
 //Typedef
 
 // typedef char Character;
