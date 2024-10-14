@@ -6,27 +6,51 @@
 
 // const int staticNum = 500;
 
-struct Books {
-  char Title[50];//Max 50
-  char Author[50];
-  char Topic[100];
-  int id_book;
-};
+
+typedef char Character;
+typedef char Longlines[];
+typedef int Sizes;
+
 int main(){
 
-  struct Books Book_1;
-  strcpy(Book_1.Title, "Teorija C"); //Korisitimo za strignove
-  strcpy(Book_1.Author, "Kemal");
-  strcpy(Book_1.Topic, "C");
-  Book_1.id_book = 221;
+  Character onlyOne = 'A';
+  printf("%c \n", onlyOne);
 
-  printf("Title: %s \n", Book_1.Title);
-  printf("Author: %s \n", Book_1.Author);
-  printf("Topic: %s \n", Book_1.Topic);
-  printf("Id of Book: %d \n", Book_1.id_book);
+  Longlines headerStart = {"---------------------- \n"};
+  printf("%s \n", headerStart);
+
+  Sizes newSize = 10;
+  Sizes l = 20;
+
+  int area = newSize * l;
+  printf("Area: %d \n", area);
+  printf("%s \n", headerStart);
+
+
 
   return 0; 
 }
+
+/*-----------------------------------*/
+//Strukture
+
+// typedef struct Books {
+//   char Title[50];//Max 50
+//   char Author[50];
+//   char Topic[100];
+//   int id_book;
+// } genericBook;
+
+  // struct Books Book_1;
+  // strcpy(Book_1.Title, "Teorija C"); //Korisitimo za strignove
+  // strcpy(Book_1.Author, "Kemal");
+  // strcpy(Book_1.Topic, "C");
+  // Book_1.id_book = 221;
+
+  // printf("Title: %s \n", Book_1.Title);
+  // printf("Author: %s \n", Book_1.Author);
+  // printf("Topic: %s \n", Book_1.Topic);
+  // printf("Id of Book: %d \n", Book_1.id_book);
 
   /* ************************ */
 //Funkcije
