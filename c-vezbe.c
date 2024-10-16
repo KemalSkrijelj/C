@@ -7,18 +7,49 @@
 // const int staticNum = 500;
 
 int main(){
-  char longString[100];
 
-  printf("Enter string: \n");
-  gets(longString);
+  FILE *fp; //File pointer
 
-  printf("You entered: \n");
-  puts(longString);
+  char newString[100] = "This is practice.";
+
+  fp = fopen("target_file.txt", "w"); //1 argument nam kaze kako ce da se zove fail koje ce se napravit, a w sluzi da ga napravi
+
+  if (fp == NULL)
+  {
+    printf("Unable to open a file \n");
+  }else
+  {
+    printf("File opened \n");
+
+    if (strlen(newString) > 0) {// proveravamo da li ima nesto u newString pomocu strlen metode
+      fputs(newString, fp); //Postavljanje sta ce biti ispisano u fajlu
+    }
+
+    fclose(fp);// Zatvaranje funkcije upisa podataka
+
+    printf("Data succesfully writen to file!! \n");
+    printf("File closed. \n") ;   
+  };
+  
   
   return 0; 
 }
+/*------------------------*/
+
+// int main(){
+//   char longString[100];
+
+//   printf("Enter string: \n");
+//   gets(longString);
+
+//   printf("You entered: \n");
+//   puts(longString);
+  
+//   return 0; 
+// }
 
 /*------------------------*/
+
 // void getOneChar() {
 //   int x;
 
