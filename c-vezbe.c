@@ -6,22 +6,36 @@
 
 // const int staticNum = 500;
 
-void getOneChar() {
-  int x;
+int main(){
+  char longString[100];
 
-  printf("Enter character: \n");
-  x = getchar();
+  printf("Enter string: \n");
+  gets(longString);
 
   printf("You entered: \n");
-  putchar(x);
-};
-
-int main(){
-
-  getOneChar();
-
+  puts(longString);
+  
   return 0; 
 }
+
+/*------------------------*/
+// void getOneChar() {
+//   int x;
+
+//   printf("Enter character: \n");
+//   x = getchar();
+
+//   printf("You entered: \n");
+//   putchar(x);
+// };
+
+//MAIN
+// int main(){
+
+//   getOneChar();
+
+//   return 0; 
+// }
 
 /*------------------------*/
 // union Rectangle{
