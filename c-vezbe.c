@@ -7,31 +7,58 @@
 // const int staticNum = 500;
 
 int main(){
-  FILE *fp; //File pointer
+  int genericNum;
 
-  char genericStorage[100];
-  fp = fopen("target_file.txt", "r"); //r znaci reading odnosno citanje file
+  FILE *fp = fopen("target_file.txt", "r");
 
   if (fp == NULL)
   {
-    printf("Unable to open file for reading. \n");
-  }else {
-    printf("The file is opened \n");
-
-    while (fgets(genericStorage, 100, fp) != NULL)
+    printf("Unable to open file in reading mode \n");
+  }
+  else
+  {
+    printf("Content: \n");
+    //  citanje iz fp      treba nam hard. adresa
+    while (fscanf(fp,"%d", &genericNum) == 1)
     {
-      printf("%s", genericStorage);
+      printf("Number: %d \n", genericNum);
     }
     
     fclose(fp);
 
-    printf("\n Data succesfully \n");
-    printf("File closed \n");
+    printf("Done. \n");
   }
   
-  return 0; 
+  
+  return 0;
 }
+/*------------------------*/
 
+// int main(){
+//   FILE *fp; //File pointer
+
+//   char genericStorage[100];
+//   fp = fopen("target_file.txt", "r"); //r znaci reading odnosno citanje file
+
+//   if (fp == NULL)
+//   {
+//     printf("Unable to open file for reading. \n");
+//   }else {
+//     printf("The file is opened \n");
+
+//     while (fgets(genericStorage, 100, fp) != NULL)
+//     {
+//       printf("%s", genericStorage);
+//     }
+    
+//     fclose(fp);
+
+//     printf("\n Data succesfully \n");
+//     printf("File closed \n");
+//   }
+  
+//   return 0; 
+// }
 /*------------------------*/
 
 // int main(){
