@@ -7,33 +7,62 @@
 // const int staticNum = 500;
 
 int main(){
-
   FILE *fp; //File pointer
 
-  char newString[100] = "This is practice.";
-
-  fp = fopen("target_file.txt", "w"); //1 argument nam kaze kako ce da se zove fail koje ce se napravit, a w sluzi da ga napravi
+  char genericStorage[100];
+  fp = fopen("target_file.txt", "r"); //r znaci reading odnosno citanje file
 
   if (fp == NULL)
   {
-    printf("Unable to open a file \n");
-  }else
-  {
-    printf("File opened \n");
+    printf("Unable to open file for reading. \n");
+  }else {
+    printf("The file is opened \n");
 
-    if (strlen(newString) > 0) {// proveravamo da li ima nesto u newString pomocu strlen metode
-      fputs(newString, fp); //Postavljanje sta ce biti ispisano u fajlu
+    while (fgets(genericStorage, 100, fp) != NULL)
+    {
+      printf("%s", genericStorage);
     }
+    
+    fclose(fp);
 
-    fclose(fp);// Zatvaranje funkcije upisa podataka
-
-    printf("Data succesfully writen to file!! \n");
-    printf("File closed. \n") ;   
-  };
-  
+    printf("\n Data succesfully \n");
+    printf("File closed \n");
+  }
   
   return 0; 
 }
+
+/*------------------------*/
+
+// int main(){
+
+//   FILE *fp; //File pointer
+
+//   char newString[100] = "This is practice.";
+
+//   fp = fopen("target_file.txt", "w"); //1 argument nam kaze kako ce da se zove fail koje ce se napravit, a w sluzi da ga napravi
+
+//   if (fp == NULL)
+//   {
+//     printf("Unable to open a file \n");
+//   }else
+//   {
+//     printf("File opened \n");
+
+//     if (strlen(newString) > 0) {                    // proveravamo da li ima nesto u newString pomocu strlen metode
+//       fputs(newString, fp); //Postavljanje sta ce biti ispisano u fajlu
+//     }
+
+//     fclose(fp);// Zatvaranje funkcije upisa podataka
+
+//     printf("Data succesfully writen to file!! \n");
+//     printf("File closed. \n") ;   
+//   };
+  
+  
+//   return 0; 
+// }
+
 /*------------------------*/
 
 // int main(){
