@@ -5,33 +5,70 @@
 // #define STATICNUMBER 200  //nacin definisanje constate
 
 // const int staticNum = 500;
-
+struct Books {
+  char Title[50];//Max 50
+  char Author[50];
+  char Topic[100];
+  int id_book;
+};
 int main(){
-  int genericNum;
+   struct Books Book_1;
 
-  FILE *fp = fopen("target_file.txt", "r");
+   FILE *fp = fopen("output_file.txt", "a"); //a-append sluzi da dodavanje u taj file koliko put mi to pozovemo u terminalu
 
-  if (fp == NULL)
-  {
-    printf("Unable to open file in reading mode \n");
-  }
-  else
-  {
-    printf("Content: \n");
-    //  citanje iz fp      treba nam hard. adresa
-    while (fscanf(fp,"%d", &genericNum) == 1)
-    {
-      printf("Number: %d \n", genericNum);
-    }
-    
+   if (fp == NULL)
+   {  
+    printf("Unable to create file. \n");
+   } else {
+    strcpy(Book_1.Title, "Teorija C"); 
+    strcpy(Book_1.Author, "Kemal");
+    strcpy(Book_1.Topic, "C");
+    Book_1.id_book = 221;
+
+//Dodavanje u file ne vidi se na ekranu.
+    fprintf(fp, "Title: %s \n", Book_1.Title);//fprintf sluzi za printanje u file
+    fprintf(fp, "Author: %s \n", Book_1.Author);
+    fprintf(fp, "Topic: %s \n", Book_1.Topic);
+    fprintf(fp, "Id of Book: %d \n", Book_1.id_book);
+    fprintf(fp, "----------------------- \n");
+
     fclose(fp);
 
-    printf("Done. \n");
+    printf("----------------------- \n");
+    printf("Data succesfully added! \n");
+    printf("File closed! \n");
   }
-  
-  
+
   return 0;
 }
+/*------------------------*/
+
+// int main(){
+//   int genericNum;
+
+//   FILE *fp = fopen("target_file.txt", "r");
+
+//   if (fp == NULL)
+//   {
+//     printf("Unable to open file in reading mode \n");
+//   }
+//   else
+//   {
+//     printf("Content: \n");
+//     //  citanje iz fp      treba nam hard. adresa
+//     while (fscanf(fp,"%d", &genericNum) == 1)
+//     {
+//       printf("Number: %d \n", genericNum);
+//     }
+    
+//     fclose(fp);
+
+//     printf("Done. \n");
+//   }
+  
+  
+//   return 0;
+// }
 /*------------------------*/
 
 // int main(){
