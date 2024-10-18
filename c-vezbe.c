@@ -5,42 +5,77 @@
 // #define STATICNUMBER 200  //nacin definisanje constate
 
 // const int staticNum = 500;
-struct Books {
-  char Title[50];//Max 50
-  char Author[50];
-  char Topic[100];
-  int id_book;
-};
 int main(){
-   struct Books Book_1;
 
-   FILE *fp = fopen("output_file.txt", "a"); //a-append sluzi da dodavanje u taj file koliko put mi to pozovemo u terminalu
+  char source_file[100], new_file[100], c;
 
-   if (fp == NULL)
-   {  
-    printf("Unable to create file. \n");
-   } else {
-    strcpy(Book_1.Title, "Teorija C"); 
-    strcpy(Book_1.Author, "Kemal");
-    strcpy(Book_1.Topic, "C");
-    Book_1.id_book = 221;
+  FILE *fp_source, *fp_output; //Kreirana 2 pointera odjednom.
 
-//Dodavanje u file ne vidi se na ekranu.
-    fprintf(fp, "Title: %s \n", Book_1.Title);//fprintf sluzi za printanje u file
-    fprintf(fp, "Author: %s \n", Book_1.Author);
-    fprintf(fp, "Topic: %s \n", Book_1.Topic);
-    fprintf(fp, "Id of Book: %d \n", Book_1.id_book);
-    fprintf(fp, "----------------------- \n");
+  printf("Source file: \n");
+  scanf("%s", source_file);
 
-    fclose(fp);
+  printf("Output file: \n");
+  scanf("%s", new_file);
 
-    printf("----------------------- \n");
-    printf("Data succesfully added! \n");
-    printf("File closed! \n");
+  if ((fp_source = fopen(source_file, "r")) == NULL)
+  {
+    printf("Unable to open source file! \n");
+  }
+  else if ((fp_output = fopen(new_file, "w")) == NULL)
+  {
+    printf("Unable to open output file for writing! \n");
+  }
+  else {
+   while ((c = getc(fp_source)) != EOF) { //Uzimace se podaci sve dok se ne dodje do kraja faila
+      putc(c, fp_output);
+   }
+   printf("Succesfully!!! \n");
   }
 
+  fclose(fp_source);
+  fclose(fp_output);
+  
   return 0;
 }
+/*------------------------*/
+
+// struct Books {
+//   char Title[50];//Max 50
+//   char Author[50];
+//   char Topic[100];
+//   int id_book;
+// };
+// int main(){
+//    struct Books Book_1;
+
+//    FILE *fp = fopen("output_file.txt", "a"); //a-append sluzi da dodavanje u taj file koliko put mi to pozovemo u terminalu
+
+//    if (fp == NULL)
+//    {  
+//     printf("Unable to create file. \n");
+//    } else {
+//     strcpy(Book_1.Title, "Teorija C"); 
+//     strcpy(Book_1.Author, "Kemal");
+//     strcpy(Book_1.Topic, "C");
+//     Book_1.id_book = 221;
+
+// //Dodavanje u file, ne vidi se na ekranu.
+//     fprintf(fp, "Title: %s \n", Book_1.Title);//fprintf sluzi za printanje u file
+//     fprintf(fp, "Author: %s \n", Book_1.Author);
+//     fprintf(fp, "Topic: %s \n", Book_1.Topic);
+//     fprintf(fp, "Id of Book: %d \n", Book_1.id_book);
+//     fprintf(fp, "----------------------- \n");
+
+//     fclose(fp);
+
+//     printf("----------------------- \n");
+//     printf("Data succesfully added! \n");
+//     printf("File closed! \n");
+//   }
+
+//   return 0;
+// }
+
 /*------------------------*/
 
 // int main(){
