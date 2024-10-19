@@ -6,37 +6,53 @@
 
 // const int staticNum = 500;
 int main(){
+  int numberArr[] = {1,2,3,4,5,6,7,8};
 
-  char source_file[100], new_file[100], c;
+  int total = 0;
+  int lengthOfArr = sizeof(numberArr)/sizeof(numberArr[0]);
 
-  FILE *fp_source, *fp_output; //Kreirana 2 pointera odjednom.
-
-  printf("Source file: \n");
-  scanf("%s", source_file);
-
-  printf("Output file: \n");
-  scanf("%s", new_file);
-
-  if ((fp_source = fopen(source_file, "r")) == NULL)
-  {
-    printf("Unable to open source file! \n");
+  for (int i = 0; i < lengthOfArr; i++){
+    total = total + numberArr[i];
+    printf("%d \n",total);
   }
-  else if ((fp_output = fopen(new_file, "w")) == NULL)
-  {
-    printf("Unable to open output file for writing! \n");
-  }
-  else {
-   while ((c = getc(fp_source)) != EOF) { //Uzimace se podaci sve dok se ne dodje do kraja faila
-      putc(c, fp_output);
-   }
-   printf("Succesfully!!! \n");
-  }
-
-  fclose(fp_source);
-  fclose(fp_output);
-  
+  printf("Total sum of integers: %d", total);
   return 0;
 }
+/*------------------------*/
+
+//int main(){
+
+//   char source_file[100], new_file[100], c; //c sluzi da proveri svaki karakter
+
+//   FILE *fp_source, *fp_output; //Kreirana 2 pointera odjednom.
+
+//   printf("Source file: \n");
+//   scanf("%s", source_file);
+
+//   printf("Output file: \n");
+//   scanf("%s", new_file);
+
+//   if ((fp_source = fopen(source_file, "r")) == NULL)
+//   {
+//     printf("Unable to open source file! \n");
+//   }
+//   else if ((fp_output = fopen(new_file, "w")) == NULL)
+//   {
+//     printf("Unable to open output file for writing! \n");
+//   }
+//   else {
+//    while ((c = getc(fp_source)) != EOF) { //Uzimace se podaci sve dok se ne dodje do kraja faila
+//       putc(c, fp_output);
+//    }
+//    printf("Succesfully!!! \n");
+//   }
+
+//   fclose(fp_source);
+//   fclose(fp_output);
+  
+//   return 0;
+// }
+
 /*------------------------*/
 
 // struct Books {
