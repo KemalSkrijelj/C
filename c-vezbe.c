@@ -10,19 +10,40 @@ int main(){
   printf("Enter number: \n");
   scanf("%d", &num);
 
-  if (num > 0)
+  if (num <= 0)
   {
-    printf("%d is a postive number", num);
-  }
-  else if (num < 0)
-  {
-    printf("%d is a negative number", num);
+    if (num == 0){
+      printf("You entered 0.");
+    }else{
+      printf("Negative Number");
+    }
   }else {
-    printf("Number is 0");
+    printf("Postive Number");
   }
-  
+    
   return 0;
 }
+/*------------------------*/
+
+// int main(){
+//   int num;
+//   printf("Enter number: \n");
+//   scanf("%d", &num);
+
+//   if (num > 0)
+//   {
+//     printf("%d is a postive number", num);
+//   }
+//   else if (num < 0)
+//   {
+//     printf("%d is a negative number", num);
+//   }else {
+//     printf("Number is 0");
+//   }
+  
+//   return 0;
+// }
+
 /*------------------------*/
 
 // int main(){
