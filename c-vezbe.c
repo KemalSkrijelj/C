@@ -6,23 +6,36 @@
 
 // const int staticNum = 500;
 int main(){
-  int num;
-  printf("Enter number: \n");
-  scanf("%d", &num);
+  char original_char;
 
-  if (num <= 0)
-  {
-    if (num == 0){
-      printf("You entered 0.");
-    }else{
-      printf("Negative Number");
-    }
-  }else {
-    printf("Postive Number");
-  }
-    
+  printf("Enter a character: \n");
+  scanf("%c", &original_char );
+
+  printf("ASCII value for %c is: %d \n", original_char, original_char  );
   return 0;
 }
+
+/*------------------------*/
+
+// int main(){
+//   int num;
+//   printf("Enter number: \n");
+//   scanf("%d", &num);
+
+//   if (num <= 0)
+//   {
+//     if (num == 0){
+//       printf("You entered 0.");
+//     }else{
+//       printf("Negative Number");
+//     }
+//   }else {
+//     printf("Postive Number");
+//   }
+    
+//   return 0;
+// }
+
 /*------------------------*/
 
 // int main(){
