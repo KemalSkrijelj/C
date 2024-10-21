@@ -6,18 +6,39 @@
 
 // const int staticNum = 500;
 int main(){
-  int numberArr[] = {1,2,3,4,5,6,7,8};
+  int num;
+  printf("Enter number: \n");
+  scanf("%d", &num);
 
-  int total = 0;
-  int lengthOfArr = sizeof(numberArr)/sizeof(numberArr[0]);
-
-  for (int i = 0; i < lengthOfArr; i++){
-    total = total + numberArr[i];
-    printf("%d \n",total);
+  if (num > 0)
+  {
+    printf("%d is a postive number", num);
   }
-  printf("Total sum of integers: %d", total);
+  else if (num < 0)
+  {
+    printf("%d is a negative number", num);
+  }else {
+    printf("Number is 0");
+  }
+  
   return 0;
 }
+/*------------------------*/
+
+// int main(){
+//   int numberArr[] = {1,2,3,4,5,6,7,8};
+
+//   int total = 0;
+//   int lengthOfArr = sizeof(numberArr)/sizeof(numberArr[0]);
+
+//   for (int i = 0; i < lengthOfArr; i++){
+//     total = total + numberArr[i];
+//     printf("%d \n",total);
+//   }
+//   printf("Total sum of integers: %d", total);
+//   return 0;
+// }
+
 /*------------------------*/
 
 //int main(){
