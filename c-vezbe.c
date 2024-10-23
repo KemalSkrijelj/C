@@ -6,14 +6,31 @@
 
 // const int staticNum = 500;
 int main(){
-  char original_char;
-
-  printf("Enter a character: \n");
-  scanf("%c", &original_char );
-
-  printf("ASCII value for %c is: %d \n", original_char, original_char  );
+  // int x;
+  // printf("Unesite ceo broj: \n");
+  // scanf("%d", x);
+  // printf("Decimalan oblik: %d \n", x);
+  // printf("Oktalni oblik: %o \n", x);
+  // printf("Heksadecimalan oblik: %x \n", x);
+  double x;
+  printf("Unesi realan broj: \n");
+  scanf("%lf", &x);
+  printf("Decimalan oblik %.2f \n", x);
+  printf("Oblik s' eksponentom %e \n", x);
+  printf("U naucnoj notaciji %g \n", x);
   return 0;
 }
+/*------------------------*/
+
+// int main(){
+//   char original_char;
+
+//   printf("Enter a character: \n");
+//   scanf("%c", &original_char );
+
+//   printf("ASCII value for %c is: %d \n", original_char, original_char  );
+//   return 0;
+// }
 
 /*------------------------*/
 
