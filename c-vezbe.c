@@ -1,23 +1,97 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define PI 3.14
 
 // #define STATICNUMBER 200  //nacin definisanje constate
 
 // const int staticNum = 500;
 int main(){
+  //1
   // int x;
   // printf("Unesite ceo broj: \n");
   // scanf("%d", x);
   // printf("Decimalan oblik: %d \n", x);
   // printf("Oktalni oblik: %o \n", x);
   // printf("Heksadecimalan oblik: %x \n", x);
-  double x;
-  printf("Unesi realan broj: \n");
-  scanf("%lf", &x);
-  printf("Decimalan oblik %.2f \n", x);
-  printf("Oblik s' eksponentom %e \n", x);
-  printf("U naucnoj notaciji %g \n", x);
+  //2
+  // double x;
+  // printf("Unesi realan broj: \n");
+  // scanf("%lf", &x);
+  // printf("Decimalan oblik %.2f \n", x);
+  // printf("Oblik s' eksponentom %e \n", x);
+  // printf("U naucnoj notaciji %g \n", x);
+  //3
+  // int ceoBr;
+  // float realanBr;
+  // printf("Unesi ceo br \n");
+  // scanf("%d", &ceoBr);
+  // printf("Unesi realan br \n");
+  // scanf("%f", &realanBr);
+  // printf("Uneti ceo broj: %d \n ", ceoBr);
+  // printf("Uneti realan broj: %f ", realanBr);
+  //4
+  // float realanBroj;
+  // printf("Unesi realan broj: \n");
+  // scanf("%f", &realanBroj);
+  // printf("Uneti broj je zaokruzen na 2 decimale: %.2f", realanBroj);
+  //5
+  // char x, y, z;
+  // printf("Unesi tri znaka: \n");
+  // scanf("%c %c %c",&x,&y,&z);
+  // printf("%c karakter u ASCII: %d \n",x,x);
+  // printf("%c karakter u ASCII: %d \n",y,y);
+  // printf("%c karakter u ASCII: %d \n",z,z);
+  // 6
+  // char a;
+  // printf("Unesi jedan karakter: \n");
+  // scanf("%c" , &a);
+  // printf("%c je u ASCII: %d \n", a,a);
+  // printf("%c je u ASCII: %d \n", a + 1,a + 1);
+  // printf("%c je u ASCII: %d \n", a + 2,a + 2);
+  // printf("%c je u ASCII: %d \n", a + 3,a + 3);
+  //7
+  // printf("Tip CHAR = %d B memorije. \n", sizeof(char));
+  // printf("Tip Unsigned int = %d B memorije.\n", sizeof(unsigned int));
+  // printf("Tip INT = %d B memorije. \n", sizeof(int));
+  // printf("Tip LONG = %d B memorije. \n", sizeof(long));
+  //8
+  // int a, b, c;
+  // printf("Unesi a: \n");
+  // scanf("%d", &a);
+  // printf("Unesi b: \n");
+  // scanf("%d", &b);
+  // printf("Pre zamene:a = %d, b=%d \n",a,b); 
+  // c = a;
+  // a = b;
+  // b = c;
+  // printf("Posle zamene a =%d, b=%d \n", a, b);
+  //9
+  // float a,b, obim, pov;
+  // printf("Unesi a stranicu: \n");
+  // scanf("%f", &a);
+  // printf("Unesi b stranicu: ");
+  // scanf("%f", &b);
+  // obim = 2*a + 2*b;
+  // printf("Obim: %.2f \n", obim);
+  // pov = a* b;
+  // printf("Povrsina: %.2f \n", pov);
+  //10
+  // float r;
+  // printf("Unesi poluprecnik: \n");
+  // scanf("%f", &r);
+  // printf("Obim : %.3f \n", 2*r* PI);
+  // printf("Povrsina: %.3f", r*r*PI);
+  //11
+  float r, pov, zap,h;
+  printf("Unesi poluprecnik osnovice: \n");
+  scanf("%f", &r);
+  printf("Unesi visinu valjka: \n");
+  scanf("%f", &h);
+  pov = 2*r*PI*(r+h);
+  zap = r*r*PI*h;
+  printf("Povrsina: %.3f \n", pov);
+  printf("Zapremina: %.3f \n", zap);
   return 0;
 }
 /*------------------------*/
