@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define PI 3.14
+#include <math.h>
 
 // #define STATICNUMBER 200  //nacin definisanje constate
 
@@ -83,15 +84,72 @@ int main(){
   // printf("Obim : %.3f \n", 2*r* PI);
   // printf("Povrsina: %.3f", r*r*PI);
   //11
-  float r, pov, zap,h;
-  printf("Unesi poluprecnik osnovice: \n");
-  scanf("%f", &r);
-  printf("Unesi visinu valjka: \n");
-  scanf("%f", &h);
-  pov = 2*r*PI*(r+h);
-  zap = r*r*PI*h;
-  printf("Povrsina: %.3f \n", pov);
-  printf("Zapremina: %.3f \n", zap);
+  // float r, pov, zap,h;
+  // printf("Unesi poluprecnik valjka: \n");
+  // scanf("%f", &r);
+  // printf("Unesi visinu valjka: \n");
+  // scanf("%f", &h);
+  // pov = 2*r*PI*(r+h);
+  // zap = r*r*PI*h;
+  // printf("Povrsina: %.3f \n", pov);
+  // printf("Zapremina: %.3f \n", zap);
+  //12
+  // float temp1, temp2;
+  // printf("Unesi vrednost temperature u Farenhajtima <od 0 do 300>: \n");
+  // scanf("%f", &temp1);
+  // printf("Temperatura u Farenhajtima: %f \n", temp1);
+  // temp2 = (5.00/9.00) * (temp1-32.00);
+  // printf("Temperatura u Celzijusima: %f C", temp2);
+  //13
+  // float A,B, X;
+  // printf("Unesi koeficijent a <ne sme biti 0>: \n");
+  // scanf("%f" ,&A);
+  // printf("Unesi koeficijent b: \n");
+  // scanf("%f" ,&B);
+  // X = B/A;
+  // printf("Oblik jednacine je %.2fX + %.2f = 0 \n", A,B);
+  // printf("Resenje X = %.2f", X);
+  //14
+  // float x, y;
+  // printf("Unesi x za resavanje zadatka \n");
+  // scanf("%f", &x);
+  // y = sqrt( x + x*x + x*x*x);
+  // printf("Y= %.2f", y);
+  //15
+  // float a, b,z ;
+  // printf("Unesi a: \n");
+  // scanf("%f", &a);
+  // printf("Unesi b: \n");
+  // scanf("%f", &b);
+  // z = sqrt(a*a + b*b);
+  // printf("Modul od Z je %.3f \n", z);
+  // 16
+  // float a,b,a1,b1,c,d,z1,z2, rz,rr, iz, ir;
+  // printf("Unesi a1:");
+  // scanf("%f", &a);
+  // printf("Unesi b1:");
+  // scanf("%f", &b);
+  // printf("Unesi a2:");
+  // scanf("%f", &a1);
+  // printf("Unesi b2:");
+  // scanf("%f", &b1);
+  // printf("Unesi c:");
+  // scanf("%f", &c);
+  // rz = a + b;
+  // rr = a - b;
+  // iz = b + b1;
+  // ir = a - a1;
+  // z1 = a + b;
+  // printf("z1+z2 = %.2f + %.2fi \n", rz, iz);
+  // printf("z1-z2 = %.2f + %.2fi \n", rr, ir); 
+  //17
+  double x1,x2,y1,y2,z1,z2,d;
+ printf("Unesite koordinate prve tacke <x1,y1,z1>: \n");
+ scanf("%lf %lf %lf",&x1,&y1,&z1);
+ printf("Unesite koordinate druge tacke <x2,y2,z2>: \n");
+ scanf("%lf %lf %lf",&x2,&y2,&z2); 
+  d = sqrt(pow(x2-x1,2) + pow(y2-y1,2) + pow(z2-z1,2));
+  printf("Rastojanje: %.2lf \n", d);
   return 0;
 }
 /*------------------------*/
