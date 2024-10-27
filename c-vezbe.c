@@ -7,149 +7,218 @@
 // #define STATICNUMBER 200  //nacin definisanje constate
 
 // const int staticNum = 500;
-int main(){
-  //1
-  // int x;
-  // printf("Unesite ceo broj: \n");
-  // scanf("%d", x);
-  // printf("Decimalan oblik: %d \n", x);
-  // printf("Oktalni oblik: %o \n", x);
-  // printf("Heksadecimalan oblik: %x \n", x);
-  //2
-  // double x;
-  // printf("Unesi realan broj: \n");
-  // scanf("%lf", &x);
-  // printf("Decimalan oblik %.2f \n", x);
-  // printf("Oblik s' eksponentom %e \n", x);
-  // printf("U naucnoj notaciji %g \n", x);
-  //3
-  // int ceoBr;
-  // float realanBr;
-  // printf("Unesi ceo br \n");
-  // scanf("%d", &ceoBr);
-  // printf("Unesi realan br \n");
-  // scanf("%f", &realanBr);
-  // printf("Uneti ceo broj: %d \n ", ceoBr);
-  // printf("Uneti realan broj: %f ", realanBr);
-  //4
-  // float realanBroj;
-  // printf("Unesi realan broj: \n");
-  // scanf("%f", &realanBroj);
-  // printf("Uneti broj je zaokruzen na 2 decimale: %.2f", realanBroj);
-  //5
-  // char x, y, z;
-  // printf("Unesi tri znaka: \n");
-  // scanf("%c %c %c",&x,&y,&z);
-  // printf("%c karakter u ASCII: %d \n",x,x);
-  // printf("%c karakter u ASCII: %d \n",y,y);
-  // printf("%c karakter u ASCII: %d \n",z,z);
-  // 6
-  // char a;
-  // printf("Unesi jedan karakter: \n");
-  // scanf("%c" , &a);
-  // printf("%c je u ASCII: %d \n", a,a);
-  // printf("%c je u ASCII: %d \n", a + 1,a + 1);
-  // printf("%c je u ASCII: %d \n", a + 2,a + 2);
-  // printf("%c je u ASCII: %d \n", a + 3,a + 3);
-  //7
-  // printf("Tip CHAR = %d B memorije. \n", sizeof(char));
-  // printf("Tip Unsigned int = %d B memorije.\n", sizeof(unsigned int));
-  // printf("Tip INT = %d B memorije. \n", sizeof(int));
-  // printf("Tip LONG = %d B memorije. \n", sizeof(long));
-  //8
-  // int a, b, c;
-  // printf("Unesi a: \n");
-  // scanf("%d", &a);
-  // printf("Unesi b: \n");
-  // scanf("%d", &b);
-  // printf("Pre zamene:a = %d, b=%d \n",a,b); 
-  // c = a;
-  // a = b;
-  // b = c;
-  // printf("Posle zamene a =%d, b=%d \n", a, b);
-  //9
-  // float a,b, obim, pov;
-  // printf("Unesi a stranicu: \n");
-  // scanf("%f", &a);
-  // printf("Unesi b stranicu: ");
-  // scanf("%f", &b);
-  // obim = 2*a + 2*b;
-  // printf("Obim: %.2f \n", obim);
-  // pov = a* b;
-  // printf("Povrsina: %.2f \n", pov);
-  //10
-  // float r;
-  // printf("Unesi poluprecnik: \n");
-  // scanf("%f", &r);
-  // printf("Obim : %.3f \n", 2*r* PI);
-  // printf("Povrsina: %.3f", r*r*PI);
-  //11
-  // float r, pov, zap,h;
-  // printf("Unesi poluprecnik valjka: \n");
-  // scanf("%f", &r);
-  // printf("Unesi visinu valjka: \n");
-  // scanf("%f", &h);
-  // pov = 2*r*PI*(r+h);
-  // zap = r*r*PI*h;
-  // printf("Povrsina: %.3f \n", pov);
-  // printf("Zapremina: %.3f \n", zap);
-  //12
-  // float temp1, temp2;
-  // printf("Unesi vrednost temperature u Farenhajtima <od 0 do 300>: \n");
-  // scanf("%f", &temp1);
-  // printf("Temperatura u Farenhajtima: %f \n", temp1);
-  // temp2 = (5.00/9.00) * (temp1-32.00);
-  // printf("Temperatura u Celzijusima: %f C", temp2);
-  //13
-  // float A,B, X;
-  // printf("Unesi koeficijent a <ne sme biti 0>: \n");
-  // scanf("%f" ,&A);
-  // printf("Unesi koeficijent b: \n");
-  // scanf("%f" ,&B);
-  // X = B/A;
-  // printf("Oblik jednacine je %.2fX + %.2f = 0 \n", A,B);
-  // printf("Resenje X = %.2f", X);
-  //14
-  // float x, y;
-  // printf("Unesi x za resavanje zadatka \n");
-  // scanf("%f", &x);
-  // y = sqrt( x + x*x + x*x*x);
-  // printf("Y= %.2f", y);
-  //15
-  // float a, b,z ;
-  // printf("Unesi a: \n");
-  // scanf("%f", &a);
-  // printf("Unesi b: \n");
-  // scanf("%f", &b);
-  // z = sqrt(a*a + b*b);
-  // printf("Modul od Z je %.3f \n", z);
-  // 16
-  // float a,b,a1,b1,c,d,z1,z2, rz,rr, iz, ir;
-  // printf("Unesi a1:");
-  // scanf("%f", &a);
-  // printf("Unesi b1:");
-  // scanf("%f", &b);
-  // printf("Unesi a2:");
-  // scanf("%f", &a1);
-  // printf("Unesi b2:");
-  // scanf("%f", &b1);
-  // printf("Unesi c:");
-  // scanf("%f", &c);
-  // rz = a + b;
-  // rr = a - b;
-  // iz = b + b1;
-  // ir = a - a1;
-  // z1 = a + b;
-  // printf("z1+z2 = %.2f + %.2fi \n", rz, iz);
-  // printf("z1-z2 = %.2f + %.2fi \n", rr, ir); 
-  //17
-  double x1,x2,y1,y2,z1,z2,d;
- printf("Unesite koordinate prve tacke <x1,y1,z1>: \n");
- scanf("%lf %lf %lf",&x1,&y1,&z1);
- printf("Unesite koordinate druge tacke <x2,y2,z2>: \n");
- scanf("%lf %lf %lf",&x2,&y2,&z2); 
-  d = sqrt(pow(x2-x1,2) + pow(y2-y1,2) + pow(z2-z1,2));
-  printf("Rastojanje: %.2lf \n", d);
+int main()
+{
+  // 1
+  //  int x;
+  //  printf("Unesite ceo broj: \n");
+  //  scanf("%d", x);
+  //  printf("Decimalan oblik: %d \n", x);
+  //  printf("Oktalni oblik: %o \n", x);
+  //  printf("Heksadecimalan oblik: %x \n", x);
+  // 2
+  //  double x;
+  //  printf("Unesi realan broj: \n");
+  //  scanf("%lf", &x);
+  //  printf("Decimalan oblik %.2f \n", x);
+  //  printf("Oblik s' eksponentom %e \n", x);
+  //  printf("U naucnoj notaciji %g \n", x);
+  // 3
+  //  int ceoBr;
+  //  float realanBr;
+  //  printf("Unesi ceo br \n");
+  //  scanf("%d", &ceoBr);
+  //  printf("Unesi realan br \n");
+  //  scanf("%f", &realanBr);
+  //  printf("Uneti ceo broj: %d \n ", ceoBr);
+  //  printf("Uneti realan broj: %f ", realanBr);
+  // 4
+  //  float realanBroj;
+  //  printf("Unesi realan broj: \n");
+  //  scanf("%f", &realanBroj);
+  //  printf("Uneti broj je zaokruzen na 2 decimale: %.2f", realanBroj);
+  // 5
+  //  char x, y, z;
+  //  printf("Unesi tri znaka: \n");
+  //  scanf("%c %c %c",&x,&y,&z);
+  //  printf("%c karakter u ASCII: %d \n",x,x);
+  //  printf("%c karakter u ASCII: %d \n",y,y);
+  //  printf("%c karakter u ASCII: %d \n",z,z);
+  //  6
+  //  char a;
+  //  printf("Unesi jedan karakter: \n");
+  //  scanf("%c" , &a);
+  //  printf("%c je u ASCII: %d \n", a,a);
+  //  printf("%c je u ASCII: %d \n", a + 1,a + 1);
+  //  printf("%c je u ASCII: %d \n", a + 2,a + 2);
+  //  printf("%c je u ASCII: %d \n", a + 3,a + 3);
+  // 7
+  //  printf("Tip CHAR = %d B memorije. \n", sizeof(char));
+  //  printf("Tip Unsigned int = %d B memorije.\n", sizeof(unsigned int));
+  //  printf("Tip INT = %d B memorije. \n", sizeof(int));
+  //  printf("Tip LONG = %d B memorije. \n", sizeof(long));
+  // 8
+  //  int a, b, c;
+  //  printf("Unesi a: \n");
+  //  scanf("%d", &a);
+  //  printf("Unesi b: \n");
+  //  scanf("%d", &b);
+  //  printf("Pre zamene:a = %d, b=%d \n",a,b);
+  //  c = a;
+  //  a = b;
+  //  b = c;
+  //  printf("Posle zamene a =%d, b=%d \n", a, b);
+  // 9
+  //  float a,b, obim, pov;
+  //  printf("Unesi a stranicu: \n");
+  //  scanf("%f", &a);
+  //  printf("Unesi b stranicu: ");
+  //  scanf("%f", &b);
+  //  obim = 2*a + 2*b;
+  //  printf("Obim: %.2f \n", obim);
+  //  pov = a* b;
+  //  printf("Povrsina: %.2f \n", pov);
+  // 10
+  //  float r;
+  //  printf("Unesi poluprecnik: \n");
+  //  scanf("%f", &r);
+  //  printf("Obim : %.3f \n", 2*r* PI);
+  //  printf("Povrsina: %.3f", r*r*PI);
+  // 11
+  //  float r, pov, zap,h;
+  //  printf("Unesi poluprecnik valjka: \n");
+  //  scanf("%f", &r);
+  //  printf("Unesi visinu valjka: \n");
+  //  scanf("%f", &h);
+  //  pov = 2*r*PI*(r+h);
+  //  zap = r*r*PI*h;
+  //  printf("Povrsina: %.3f \n", pov);
+  //  printf("Zapremina: %.3f \n", zap);
+  // 12
+  //  float temp1, temp2;
+  //  printf("Unesi vrednost temperature u Farenhajtima <od 0 do 300>: \n");
+  //  scanf("%f", &temp1);
+  //  printf("Temperatura u Farenhajtima: %f \n", temp1);
+  //  temp2 = (5.00/9.00) * (temp1-32.00);
+  //  printf("Temperatura u Celzijusima: %f C", temp2);
+  // 13
+  //  float A,B, X;
+  //  printf("Unesi koeficijent a <ne sme biti 0>: \n");
+  //  scanf("%f" ,&A);
+  //  printf("Unesi koeficijent b: \n");
+  //  scanf("%f" ,&B);
+  //  X = B/A;
+  //  printf("Oblik jednacine je %.2fX + %.2f = 0 \n", A,B);
+  //  printf("Resenje X = %.2f", X);
+  // 14
+  //  float x, y;
+  //  printf("Unesi x za resavanje zadatka \n");
+  //  scanf("%f", &x);
+  //  y = sqrt( x + x*x + x*x*x);
+  //  printf("Y= %.2f", y);
+  // 15
+  //  float a, b,z ;
+  //  printf("Unesi a: \n");
+  //  scanf("%f", &a);
+  //  printf("Unesi b: \n");
+  //  scanf("%f", &b);
+  //  z = sqrt(a*a + b*b);
+  //  printf("Modul od Z je %.3f \n", z);
+  //  16
+  //  float a,b,a1,b1,c,d,z1,z2, rz,rr, iz, ir;
+  //  printf("Unesi a1:");
+  //  scanf("%f", &a);
+  //  printf("Unesi b1:");
+  //  scanf("%f", &b);
+  //  printf("Unesi a2:");
+  //  scanf("%f", &a1);
+  //  printf("Unesi b2:");
+  //  scanf("%f", &b1);
+  //  printf("Unesi c:");
+  //  scanf("%f", &c);
+  //  rz = a + b;
+  //  rr = a - b;
+  //  iz = b + b1;
+  //  ir = a - a1;
+  //  z1 = a + b;
+  //  printf("z1+z2 = %.2f + %.2fi \n", rz, iz);
+  //  printf("z1-z2 = %.2f + %.2fi \n", rr, ir);
+  // 17
+  //  double x1,x2,y1,y2,z1,z2,d;
+  //  printf("Unesite koordinate prve tacke <x1,y1,z1>: \n");
+  //  scanf("%lf %lf %lf",&x1,&y1,&z1);
+  //  printf("Unesite koordinate druge tacke <x2,y2,z2>: \n");
+  //  scanf("%lf %lf %lf",&x2,&y2,&z2);
+  //  d = sqrt(pow(x2-x1,2) + pow(y2-y1,2) + pow(z2-z1,2));
+  //  printf("Rastojanje: %.2lf \n", d);
+  //  18
+  //  float Xa, Xb,Xc, Ya,Yb,Yc,a,b,c,s, P;
+  //  printf("Unesi kordinate prvog temena ugla: <Xa, Ya>  \n");   scanf("%f %f", &Xa, &Ya);
+  //  printf("Unesi kordinate drugog temena ugla: <Xb, Yb> \n");   scanf("%f %f", &Xb, &Yb);
+  //  printf("Unesi kordinate treceg temena ugla: <Xc, Yc> \n");   scanf("%f %f", &Xc, &Yc);
+
+  // a = sqrt(pow (Xb - Xc, 2) + pow (Yb - Yc, 2) );
+  // b = sqrt(pow (Xc - Xa, 2) + pow (Yc - Ya, 2) );
+  // c = sqrt(pow (Xa - Xb, 2) + pow (Ya - Yb, 2) );
+  // s = (a + b + c) / 2;
+
+  // P = sqrt( s*(s-a)*(s-b)*(s-c) );
+  // printf("Povrsina trougla iznosi: %.3f \n", P);
+  // 19
+  // int broj, a,b,c;
+  // printf("Unesi neki trocifreni broj: \n");
+  // scanf("%d", &broj);
+  // a = broj/100;
+  // b = (broj/10) % 10;
+  // c = broj % 10;
+  // printf("Cifre su %d, %d, %d \n", a, b,c);
+  // printf("Suma cifara je %d", a+b+c);
+  // 20
+  // int cenaProizvoda,a,b,c;
+  // printf("Unesi cenu nekog proizvoda: \n");
+  // scanf("%d", &cenaProizvoda);
+  // a = cenaProizvoda / 500 ;
+  // b = (cenaProizvoda % 500) /100 ;
+  // c = (cenaProizvoda % 500) % 100;
+  // printf("Da bi platili proizvod od %d din potrebno Vam je %d novcanica od 500din \n", cenaProizvoda, a);
+  // printf("Da bi platili proizvod od %d din potrebno Vam je %d novcanica od 100din \n", cenaProizvoda, b);
+  // printf("Da bi platili proizvod od %d din potrebno Vam je %d novcanica od 1din", cenaProizvoda, c);
+  // 21
+  // long sec, day, hour, min, s;
+  // printf("Unesi vremenski interval u sekundam: \n");
+  // scanf("%ld", &sec);
+  // s = sec % 60;
+  // min = sec / 60;
+  // hour = min / 60;
+  // min = min % 60;
+  // day = hour /24;
+  // hour = hour %24;
+  // printf("<day, hour, min, s> %ld days %ld hours %ld min %ld sec", day, hour,min, s);
+  // 22
+  // double radijan;
+  // int min, sec, stepen;
+  // printf("Unesi ugao u radijanu: \n");
+  // scanf("%lf", &radijan);
+  // radijan = radijan * 180 / PI;
+  // stepen = (int)radijan;
+  // radijan = radijan - stepen;
+  // radijan = radijan * 60;
+  // min = (int)radijan;
+  // radijan = radijan - min;
+  // radijan = radijan * 60;
+  // sec = (int)radijan;
+  // printf("<stepeni, minuti, sekunde > %d %d %d \n", stepen, min, sec);
+  // 23
+  int x, y, n;
+  printf("Unesi broj u heksadecimalnom zapisu: \n");
+  scanf("%i %i", &x, &y);
+  printf("Unesi broj pomeraja: \n");
+  scanf("%d", &n);
+  printf("%#x & %#x = %#x \n", x, y, x & y);
+  printf("%#x | %#x = %#x \n", x, y, x | y);
+  printf("%#x ^ %#x = %#x \n", x, y, x ^ y);
+  printf("%#x << %#x = %#x \n", x, y, x << n);
+  printf("%#x >> %#x = %#x \n", x, y, y >> n);
   return 0;
 }
 /*------------------------*/
@@ -181,7 +250,7 @@ int main(){
 //   }else {
 //     printf("Postive Number");
 //   }
-    
+
 //   return 0;
 // }
 
@@ -202,7 +271,7 @@ int main(){
 //   }else {
 //     printf("Number is 0");
 //   }
-  
+
 //   return 0;
 // }
 
@@ -224,7 +293,7 @@ int main(){
 
 /*------------------------*/
 
-//int main(){
+// int main(){
 
 //   char source_file[100], new_file[100], c; //c sluzi da proveri svaki karakter
 
@@ -253,7 +322,7 @@ int main(){
 
 //   fclose(fp_source);
 //   fclose(fp_output);
-  
+
 //   return 0;
 // }
 
@@ -271,10 +340,10 @@ int main(){
 //    FILE *fp = fopen("output_file.txt", "a"); //a-append sluzi da dodavanje u taj file koliko put mi to pozovemo u terminalu
 
 //    if (fp == NULL)
-//    {  
+//    {
 //     printf("Unable to create file. \n");
 //    } else {
-//     strcpy(Book_1.Title, "Teorija C"); 
+//     strcpy(Book_1.Title, "Teorija C");
 //     strcpy(Book_1.Author, "Kemal");
 //     strcpy(Book_1.Topic, "C");
 //     Book_1.id_book = 221;
@@ -315,13 +384,12 @@ int main(){
 //     {
 //       printf("Number: %d \n", genericNum);
 //     }
-    
+
 //     fclose(fp);
 
 //     printf("Done. \n");
 //   }
-  
-  
+
 //   return 0;
 // }
 /*------------------------*/
@@ -342,14 +410,14 @@ int main(){
 //     {
 //       printf("%s", genericStorage);
 //     }
-    
+
 //     fclose(fp);
 
 //     printf("\n Data succesfully \n");
 //     printf("File closed \n");
 //   }
-  
-//   return 0; 
+
+//   return 0;
 // }
 /*------------------------*/
 
@@ -375,11 +443,10 @@ int main(){
 //     fclose(fp);// Zatvaranje funkcije upisa podataka
 
 //     printf("Data succesfully writen to file!! \n");
-//     printf("File closed. \n") ;   
+//     printf("File closed. \n") ;
 //   };
-  
-  
-//   return 0; 
+
+//   return 0;
 // }
 
 /*------------------------*/
@@ -392,8 +459,8 @@ int main(){
 
 //   printf("You entered: \n");
 //   puts(longString);
-  
-//   return 0; 
+
+//   return 0;
 // }
 
 /*------------------------*/
@@ -408,12 +475,12 @@ int main(){
 //   putchar(x);
 // };
 
-//MAIN
-// int main(){
+// MAIN
+//  int main(){
 
 //   getOneChar();
 
-//   return 0; 
+//   return 0;
 // }
 
 /*------------------------*/
@@ -423,8 +490,8 @@ int main(){
 //   char name [50];
 // };
 
-//U main-u
-// union Rectangle first; //Davanje imena
+// U main-u
+//  union Rectangle first; //Davanje imena
 
 // first.x = 10;//U unionu da bi dobili vrednost koju smo iskucali, moramo odma nakon nje da je printf(), inace cemo dobiti random br
 // printf("%d \n", first.x);
@@ -437,28 +504,28 @@ int main(){
 
 /*--------------------------*/
 
-//Typedef
+// Typedef
 
 // typedef char Character;
 // typedef char Longlines[];
 // typedef int Sizes;
 
-  //U main-u
-  // Character onlyOne = 'A';
-  // printf("%c \n", onlyOne);
+// U main-u
+//  Character onlyOne = 'A';
+//  printf("%c \n", onlyOne);
 
-  // Longlines headerStart = {"---------------------- \n"};
-  // printf("%s \n", headerStart);
+// Longlines headerStart = {"---------------------- \n"};
+// printf("%s \n", headerStart);
 
-  // Sizes newSize = 10;
-  // Sizes l = 20;
+// Sizes newSize = 10;
+// Sizes l = 20;
 
-  // int area = newSize * l;
-  // printf("Area: %d \n", area);
-  // printf("%s \n", headerStart);
+// int area = newSize * l;
+// printf("Area: %d \n", area);
+// printf("%s \n", headerStart);
 
 /*-----------------------------------*/
-//Strukture
+// Strukture
 
 // typedef struct Books {
 //   char Title[50];//Max 50
@@ -467,20 +534,20 @@ int main(){
 //   int id_book;
 // } genericBook;
 
-  //U main-u
-  // struct Books Book_1;
-  // strcpy(Book_1.Title, "Teorija C"); //Korisitimo za strignove
-  // strcpy(Book_1.Author, "Kemal");
-  // strcpy(Book_1.Topic, "C");
-  // Book_1.id_book = 221;
+// U main-u
+//  struct Books Book_1;
+//  strcpy(Book_1.Title, "Teorija C"); //Korisitimo za strignove
+//  strcpy(Book_1.Author, "Kemal");
+//  strcpy(Book_1.Topic, "C");
+//  Book_1.id_book = 221;
 
-  // printf("Title: %s \n", Book_1.Title);
-  // printf("Author: %s \n", Book_1.Author);
-  // printf("Topic: %s \n", Book_1.Topic);
-  // printf("Id of Book: %d \n", Book_1.id_book);
+// printf("Title: %s \n", Book_1.Title);
+// printf("Author: %s \n", Book_1.Author);
+// printf("Topic: %s \n", Book_1.Topic);
+// printf("Id of Book: %d \n", Book_1.id_book);
 
-  /* ************************ */
-//Funkcije
+/* ************************ */
+// Funkcije
 
 // int exportFunc (int x, int y) {
 //   int addition = x + y;
@@ -531,7 +598,7 @@ int main(){
 // void simpleCalc() {
 //   int x = 10;
 //   int y = 20;
-//   int result = x + y; 
+//   int result = x + y;
 
 //   printf("--------------- \n");
 //   printf("Result: %d \n", result);
@@ -542,117 +609,116 @@ int main(){
 //   system("ping google.com");
 // }
 
-  /* ************************ */
+/* ************************ */
 
-  // int orginal = 5;
+// int orginal = 5;
 
-  // int * priPointer = &orginal;
-  // int ** secondPointer = &priPointer;
+// int * priPointer = &orginal;
+// int ** secondPointer = &priPointer;
 
-  // printf("Preko orginala: %d \n", orginal);
-  // printf("Vrednost preko pointera: %d \n", *priPointer);
+// printf("Preko orginala: %d \n", orginal);
+// printf("Vrednost preko pointera: %d \n", *priPointer);
 
-  // printf("Hardverska adresa varijable %p \n", priPointer);
-  // printf("Hardverska adresa direktno: %p \n", &orginal);
+// printf("Hardverska adresa varijable %p \n", priPointer);
+// printf("Hardverska adresa direktno: %p \n", &orginal);
 
-  // printf("Adresa primarnog pointera preko sekundarnog pointera %p \n", secondPointer);
-  // printf("Adresa primarnog pointera bez pravljenja sekundarnog pointera: %p \n", &priPointer);
+// printf("Adresa primarnog pointera preko sekundarnog pointera %p \n", secondPointer);
+// printf("Adresa primarnog pointera bez pravljenja sekundarnog pointera: %p \n", &priPointer);
 
-  // printf("Vrednost preko sekundarnog pointera: %d \n", **secondPointer);
-  
+// printf("Vrednost preko sekundarnog pointera: %d \n", **secondPointer);
 
-  /* ************************ */
-  // int number = 10;
-  // printf("Vrednost preko varijable: %d \n", number);
+/* ************************ */
+// int number = 10;
+// printf("Vrednost preko varijable: %d \n", number);
 
-  // printf("Prava hardverska adresa: %p \n", &number);
+// printf("Prava hardverska adresa: %p \n", &number);
 
-  // int * ptrNumber = &number;//Kada pravimo pointer koristimo *
+// int * ptrNumber = &number;//Kada pravimo pointer koristimo *
 
-  // printf("Pointer: %p \n", ptrNumber);//Adresa kontejnera
+// printf("Pointer: %p \n", ptrNumber);//Adresa kontejnera
 
-  // printf("Vrednost preko pointera: %d \n", *ptrNumber);//Kad ga izvalcimo isto koristimo *
+// printf("Vrednost preko pointera: %d \n", *ptrNumber);//Kad ga izvalcimo isto koristimo *
 
-    /* ************************ */
-  // char someString[] = "Hack the Planet";
+/* ************************ */
+// char someString[] = "Hack the Planet";
 
-  // printf("Some string: %s \n", someString); 
-  // printf("Value: %c \n", someString[0]);// [] koristimo da bi nam printf bilo neko slovo
-  
-  // someString[0] = 'W'; //Izmena slova u recenici
-  // printf("Value: %c \n", someString[0]);
+// printf("Some string: %s \n", someString);
+// printf("Value: %c \n", someString[0]);// [] koristimo da bi nam printf bilo neko slovo
 
-  // printf("String size: %d \n", sizeof(someString));
+// someString[0] = 'W'; //Izmena slova u recenici
+// printf("Value: %c \n", someString[0]);
 
-  // //For petlja za svako slovo
-  // for (int x = 0; x < sizeof(someString); x++)
-  // {
-  //   printf("Char atm: %c \n", someString[x]);
-  // }
-  
-  /* ************************ */
-  // int someNumbers[] = {5,25,100, 500};
-  // char someChars[] = {'A', 'B','C'};
+// printf("String size: %d \n", sizeof(someString));
 
-  // int x = 0;
+// //For petlja za svako slovo
+// for (int x = 0; x < sizeof(someString); x++)
+// {
+//   printf("Char atm: %c \n", someString[x]);
+// }
 
-  // for (x; x < 4; x++)
-  // {
-  //   printf("Number: %d \n", someNumbers[x]);
-  // };
-    
-  // printf("Number: %d \n", someNumbers[0]);
-  // printf("Number: %d \n", someNumbers[1]);
-  // printf("Number: %d \n", someNumbers[3]);
+/* ************************ */
+// int someNumbers[] = {5,25,100, 500};
+// char someChars[] = {'A', 'B','C'};
 
-  // someChars[0] ='K';
-  // printf("Number: %c \n", someChars[0]);
+// int x = 0;
 
- /* ************************ */
-  // while (x <= 10)
-  // {
-  //   if (x == 7)
-  //   {
-  //     x++;
-  //     continue;
-  //   }
-    
-  //    printf("X je u ovom momentu broj - %d \n", x);
-  //    x++;
+// for (x; x < 4; x++)
+// {
+//   printf("Number: %d \n", someNumbers[x]);
+// };
 
-   /* ************************ */
-  // int x;
-  // for ( x = 0; x < 10; x++)
-  // {
-  //   if (x == 5)
-  //   {
-  //     continue;
-  //   }
-  //   printf("Ovo su brojevi %d \n", x);
-  // }
+// printf("Number: %d \n", someNumbers[0]);
+// printf("Number: %d \n", someNumbers[1]);
+// printf("Number: %d \n", someNumbers[3]);
 
-   /* ************************ */
-  // int x = 0;
-  // do
-  // {
-  //   printf("x in this moment of time: %d \n", x);
-  //   x++;
-  // } while (x < 20);
+// someChars[0] ='K';
+// printf("Number: %c \n", someChars[0]);
 
-   /* ************************ */
-  // int x = 0;
+/* ************************ */
+// while (x <= 10)
+// {
+//   if (x == 7)
+//   {
+//     x++;
+//     continue;
+//   }
 
-  // while (x < 10)
-  // {
-  //   printf("x in this moment of time: %d \n", x);
-  //   x++;
-  // }
-  // int x;
-  
-  // for (x = 0; x <= 10; x++)
-  // {
-  //   printf("X at the moment: %d \n", x);
-  // }
-  
-  // return 0;
+//    printf("X je u ovom momentu broj - %d \n", x);
+//    x++;
+
+/* ************************ */
+// int x;
+// for ( x = 0; x < 10; x++)
+// {
+//   if (x == 5)
+//   {
+//     continue;
+//   }
+//   printf("Ovo su brojevi %d \n", x);
+// }
+
+/* ************************ */
+// int x = 0;
+// do
+// {
+//   printf("x in this moment of time: %d \n", x);
+//   x++;
+// } while (x < 20);
+
+/* ************************ */
+// int x = 0;
+
+// while (x < 10)
+// {
+//   printf("x in this moment of time: %d \n", x);
+//   x++;
+// }
+// int x;
+
+// for (x = 0; x <= 10; x++)
+// {
+//   printf("X at the moment: %d \n", x);
+// }
+
+// return 0;
 // }
