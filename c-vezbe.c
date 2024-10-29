@@ -209,16 +209,62 @@ int main()
   // sec = (int)radijan;
   // printf("<stepeni, minuti, sekunde > %d %d %d \n", stepen, min, sec);
   // 23
-  int x, y, n;
-  printf("Unesi broj u heksadecimalnom zapisu: \n");
-  scanf("%i %i", &x, &y);
-  printf("Unesi broj pomeraja: \n");
-  scanf("%d", &n);
-  printf("%#x & %#x = %#x \n", x, y, x & y);
-  printf("%#x | %#x = %#x \n", x, y, x | y);
-  printf("%#x ^ %#x = %#x \n", x, y, x ^ y);
-  printf("%#x << %#x = %#x \n", x, y, x << n);
-  printf("%#x >> %#x = %#x \n", x, y, y >> n);
+  // int x, y, n;
+  // printf("Unesi broj u heksadecimalnom zapisu: \n");
+  // scanf("%i %i", &x, &y);
+  // printf("Unesi broj pomeraja: \n");
+  // scanf("%d", &n);
+  // printf("%#x & %#x = %#x \n", x, y, x & y);
+  // printf("%#x | %#x = %#x \n", x, y, x | y);
+  // printf("%#x ^ %#x = %#x \n", x, y, x ^ y);
+  // printf("%#x << %#x = %#x \n", x, y, x << n);
+  // printf("%#x >> %#x = %#x \n", x, y, y >> n);
+  //24
+  // int broj;
+  // printf("Unesi broj neki: \n");
+  // scanf("%d", &broj);
+  // if (broj % 2 == 0)
+  // {
+  //   printf("Broj je paran");
+  // }else {
+  //   printf("Broj je neparan");
+  // }
+  //25 
+  // int a;
+  // printf("Unesi neki broj: \n");
+  // scanf("%d", &a);
+  // if (a < 0)
+  // {
+  //   printf("Broj je negativan.");
+  // }
+  // else if (a > 0)
+  // {
+  //   printf("Broj je pozitivan.");
+  // }
+  // else
+  // {
+  //   printf("Broj je jednak 0");
+  // }
+  //26
+  int a,b;
+  printf("Unesi dva broja : \n");
+  scanf("%d %d", &a, &b);
+  if (a == b)
+  {
+    printf("Brojevi su jednaki");
+  }
+  else if (a > b)
+  {
+    printf("Broj %d je veci od %d", a, b);
+  }
+  else
+  {
+    printf("Broj %d je veci od %d", b, a); 
+  }
+  
+  
+  
+  
   return 0;
 }
 /*------------------------*/
