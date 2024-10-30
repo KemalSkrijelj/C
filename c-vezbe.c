@@ -219,7 +219,7 @@ int main()
   // printf("%#x ^ %#x = %#x \n", x, y, x ^ y);
   // printf("%#x << %#x = %#x \n", x, y, x << n);
   // printf("%#x >> %#x = %#x \n", x, y, y >> n);
-  //24
+  // 24
   // int broj;
   // printf("Unesi broj neki: \n");
   // scanf("%d", &broj);
@@ -229,7 +229,7 @@ int main()
   // }else {
   //   printf("Broj je neparan");
   // }
-  //25 
+  // 25
   // int a;
   // printf("Unesi neki broj: \n");
   // scanf("%d", &a);
@@ -245,25 +245,174 @@ int main()
   // {
   //   printf("Broj je jednak 0");
   // }
-  //26
-  int a,b;
-  printf("Unesi dva broja : \n");
-  scanf("%d %d", &a, &b);
-  if (a == b)
-  {
-    printf("Brojevi su jednaki");
-  }
-  else if (a > b)
-  {
-    printf("Broj %d je veci od %d", a, b);
-  }
-  else
-  {
-    printf("Broj %d je veci od %d", b, a); 
-  }
-  
-  
-  
+  // 26
+  // int a,b;
+  // printf("Unesi dva broja : \n");
+  // scanf("%d %d", &a, &b);
+  // if (a == b)
+  // {
+  //   printf("Brojevi su jednaki");
+  // }
+  // else if (a > b)
+  // {
+  //   printf("Broj %d je veci od %d", a, b);
+  // }
+  // else
+  // {
+  //   printf("Broj %d je veci od %d", b, a);
+  // }
+  // Lab vezbe
+  // int n, m;
+  // long long p = 1;
+  // printf("Unesi vrednost N: \n");
+  // scanf("%d", &n);
+  // printf("Unesi vrednost M: \n");
+  // scanf("%d", &m);
+  // for (int i = 0; i < m; i++)
+  // {
+  //   p *= (n + i * m);
+  // }
+  // printf("P je: %lld ", p);
+  // 27
+  // int a,b,c, max;
+  // printf("Unesi brojeve: \n");
+  // scanf("%d %d %d", &a, &b, &c);
+  // max = a;
+  // if (b > max)
+  // {
+  //   max = b;
+  // }else if (c > max)
+  // {
+  //   max = c;
+  // }
+  // printf("Najveci uneti broj je: %d \n", max);
+  // 28
+  // float x, y, z, pomocna;
+  // printf("Unesi 3 realna broja: \n");
+  // scanf("%f %f %f", &x, &y, &z);
+  // if (x > y)
+  // {
+  //   pomocna = x;
+  //   x = y;
+  //   y = pomocna;
+  // }
+  // if (x > z)
+  // {
+  //   pomocna = x;
+  //   x = z;
+  //   z = pomocna;
+  // }
+  // if (y > z)
+  // {
+  //   pomocna = y;
+  //   y = z;
+  //   z = pomocna;
+  // }
+  // printf("Ispisi brojeve po velicini %.2f %.2f %.2f", x, y, z);
+  // 29
+  // int k, n;
+  // printf("Unesite broj: \n");
+  // scanf("%d", &n);
+  // printf("Unesite poziciju tog broja za proveru: \n");
+  // scanf("%d", &k);
+  // if ((n & (1 << k)) != 0)
+  // {
+  //   printf("Bit je 1");
+  // }
+  // else
+  // {
+  //   printf("Bit je 0");
+  // }
+  // 30
+  // int a;
+  // printf("Unesi broj poena: \n");
+  // scanf("%d", &a);
+  // if (a > 91)
+  // {
+  //   printf("Ocena je 10");
+  // }
+  // else if (a > 81)
+  // {
+  //   printf("Ocena je 9");
+  // }
+  // else if (a > 71)
+  // {
+  //   printf("Ocena je 8");
+  // }
+  // else if (a > 61)
+  // {
+  //   printf("Ocena je 7");
+  // }
+  // else if (a > 51)
+  // {
+  //   printf("Ocena je 6");
+  // }
+  // else
+  // {
+  //   printf("Niste polozili ispit");
+  // }
+  // 31
+  // int a, b, x;
+  // printf("Unesi donju i gornju granicu opsega: \n");
+  // scanf("%d %d", &a, &b);
+  // printf("Unesi ceo br x: \n");
+  // scanf("%d", &x);
+  // if ((a <= x * x) && (x * x <= b))
+  // {
+  //   printf("Kvadrat broj %d pripada pripada opsegu [%d,%d ]", x, a, b);
+  // }
+  // 32
+  // int num1, num2, sum;
+  // printf("Unesi 2 broja: \n");
+  // scanf("%d %d", &num1, &num2);
+  // if (num1 > num2)
+  // {
+  //   sum = num1 - num2;
+  // }
+  // else if (num2 > num1)
+  // {
+  //   sum = num2 - num1;
+  // }
+  // else
+  // {
+  //   printf("Brojevi su isti");
+  // }
+  // printf("Suma: %d", sum);
+  // 33
+  // float x;
+  // int y;
+  // printf("Unesi broj: \n");
+  // scanf("%f", &x);
+  // if (x == 0)
+  // {
+  //   y = 0;
+  // }
+  // else if (x < 0)
+  // {
+  //   y = -1;
+  // }
+  // else
+  // {
+  //   y = 1;
+  // }
+  // printf("Y u signum funkciji je: %d", y);
+  // 34
+  // float x, y;
+  // printf("Unesi x = \n");
+  // scanf("%f", &x);
+  // if ((x > -2) && (x <= 2))
+  // {
+  //   y = 2 * x;
+  // }
+  // else if ((x >= 5) && (x < 7))
+  // {
+  //   y = (3 * x) - 1;
+  // }
+  // else
+  // {
+  //   y = 1 / x;
+  // }
+  // printf("Y= %.2f", y);
   
   return 0;
 }
