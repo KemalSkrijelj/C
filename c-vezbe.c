@@ -413,7 +413,83 @@ int main()
   //   y = 1 / x;
   // }
   // printf("Y= %.2f", y);
-  
+  // 35
+  // int x, y, z;
+  // printf("Unesi x= \n");
+  // scanf("%d", &x);
+  // printf("Unesi y= \n");
+  // scanf("%d", &y);
+  // if (y <= 0)
+  // {
+  //   if ((x * x) < (y * y))
+  //   {
+  //     z = y * y;
+  //   }
+  //   else
+  //   {
+  //     z = x * x;
+  //   }
+  // }
+  // else
+  // {
+  //   if (x < y)
+  //   {
+  //     z = x;
+  //   }
+  //   else
+  //   {
+  //     z = y;
+  //   }
+  // }
+  // printf("Funkcija z= %d", z);
+  // 36
+  // float a, b, c, s, p;
+  // printf("Unesi a= \n");
+  // scanf("%f", &a);
+  // printf("Unesi b= \n");
+  // scanf("%f", &b);
+  // printf("Unesi c= \n");
+  // scanf("%f", &c);
+  // if (a + b > c && b + c > a && a + c > b)
+  // {
+  //   s = (a + b + c) / 2;
+  //   p = sqrt(s*(s - a) * (s - b) * (s - c));
+  //   printf("Stranice formiraju trougao, povrsina = %f", p);
+  // }else
+  // {
+  //   printf("Ove stranice ne oznacavaju stranice trougla.");
+  // }
+  // 37
+  // double xa, ya, xb, yb, xc, yc, a, b, c, alfa, beta, gama;
+  // printf("Unesi kordinate tacke A= (x,y)\n");
+  // scanf("%lf %lf", &xa, &ya);
+  // printf("Unesi kordinate tacke B= (x,y)\n");
+  // scanf("%lf %lf", &xb, &yb);
+  // printf("Unesi kordinate tacke C= (x,y)\n");
+  // scanf("%lf %lf", &xc, &yc);
+  // a = sqrt(pow((xb - xc), 2) - pow((yb - yc), 2));
+  // b = sqrt(pow((xc - xa), 2) - pow((yc - ya), 2));
+  // c = sqrt(pow((xa - xb), 2) - pow((ya - yb), 2));
+  // printf("Stranice:\n a=%lf \n, b=%lf \n, c=%lf \n", a, b, c);
+  // if (a + b > c && b + c > a && a + c > b)
+  // {
+  //   alfa = acos((b * b + c * c - a * a) / (2 * b * c));
+  //   beta = acos((c * c + a * a - b * b) / (2 * c * a));
+  //   gama = acos((a * a + b * b - c * c) / (2 * a * b));
+  //   alfa = alfa * 180 / PI;
+  //   beta = beta * 180 / PI;
+  //   gama = gama * 180 / PI;
+  //   printf("Uglovi: \n");
+  //   printf("Alfa: %lf", alfa);
+  //   printf("Beta: %lf", beta);
+  //   printf("Gama: %lf", gama);
+  // }
+  // else
+  // {
+  //   printf("Ne moze se kreirati trougao");
+  // }
+  // 38
+
   return 0;
 }
 /*------------------------*/
