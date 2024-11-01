@@ -489,6 +489,94 @@ int main()
   //   printf("Ne moze se kreirati trougao");
   // }
   // 38
+  // double a1, b1, a2, b2, x, y;
+  // printf("A1 =");
+  // scanf("%lf", &a1);
+  // printf("B1 =");
+  // scanf("%lf", &b1);
+  // printf("A2 =");
+  // scanf("%lf", &a2);
+  // printf("B2 =");
+  // scanf("%lf", &b2);
+  // if (a1 == b2)
+  // {
+  //   if (b1 == b2)
+  //   {
+  //     printf("Prave se podudaraju");
+  //   }
+  //   else
+  //   {
+  //     printf("Prave su paralelne");
+  //   }
+  // } else
+  // {
+  //   x= (b2-b1) / (a1-a2);
+  //   y = a1 * x + b1;
+  //   printf("Tacka preseka je x=%lf, y = %lf", x, y);
+  // }
+  // 39
+  // char z;
+  // double a,b,x;
+  // printf("Unesi znak [<,>]: \n"); scanf("%c", &z);
+  // printf("A= \n "); scanf("%lf", &a);
+  // printf("B= \n "); scanf("%lf", &b);
+  // printf("Oblik nejednacine je %lf *x + %lf %c 0 ", a,b,z);
+  // x = -b/a;
+  // if (a>0)
+  // {
+  //   printf("Resenje x %c %lf", z,x);
+  // }else
+  // {
+  //   printf("Resenje %c%x", z, x);
+  // }
+  // 40
+  // int n, s;
+  // printf("Unesi x= \n");
+  // scanf("%d", &n);
+  // s = 0;
+  // for (int i = 0; i <= n; i++)
+  // {
+  //   s = s + i;
+  // }
+  // printf("Suma: %d", s);
+  // 41
+  // int n;
+  // float a, s, ars;
+  // s = 0;
+  // printf("n= ");
+  // scanf("%d", &n);
+  // printf("Unesite %d brojeva:\n", n);
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   scanf("%f", &a);
+  //   s += a;
+  // }
+  // ars = s / n;
+  // printf("Suma: \n", s);
+  // printf("Arihmeticka sredina: \n", ars)
+  // 42
+  // int x, faktorijel;
+  // faktorijel = 1;
+  // printf("Unesi x: \n");
+  // scanf("%d", &x);
+  // for (int i = 1; i <= x; i++)
+  // {
+  //   faktorijel = faktorijel * i;
+  // }
+  // printf("Faktorijel broja %d je %d", x,faktorijel);
+  // 43
+  int n, f;
+  float s;
+  f = 1;
+  s = 0;
+  printf("Unesi n: \n");
+  scanf("%d", &n);
+  for (int i = 1; i <= n; i++)
+  {
+    f = f * i;
+    s = s + f;
+  }
+  printf("Suma: %f \n", s);
 
   return 0;
 }
