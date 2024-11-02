@@ -565,18 +565,165 @@ int main()
   // }
   // printf("Faktorijel broja %d je %d", x,faktorijel);
   // 43
-  int n, f;
-  float s;
-  f = 1;
-  s = 0;
-  printf("Unesi n: \n");
+  // int n, f;
+  // float s;
+  // f = 1;
+  // s = 0;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   f = f * i;
+  //   s = s + f;
+  // }
+  // printf("Suma: %f \n", s);
+  // 44
+  // double a1, a2, b1, b2, c1, c2,x, D,Dx,Dy, y;
+  // printf("Unesi a1= \n"); scanf("%lf", &a1);
+  // printf("Unesi b1= \n"); scanf("%lf", &b1);
+  // printf("Unesi c1= \n"); scanf("%lf", &c1);
+  // printf("Unesi a2= \n"); scanf("%lf", &a2);
+  // printf("Unesi b2= \n"); scanf("%lf", &b2);
+  // printf("Unesi c2= \n"); scanf("%lf", &c2);
+  // D = a1*b2 - a2 * b1;
+  // Dx = c1*b2 - c2*b1;
+  // Dy = a1*c2 - a2*c1;
+  // if (D != 0)
+  // {
+  //   x = Dx /D;
+  //   y = Dy /D;
+  //   printf("Resenje sistema: x = %lf \n", x);
+  //   printf("Resenje sistema: y = %lf \n", y);
+  // }else if (D == Dx && Dy == 0)
+  // {
+  //   printf("Sistem ima beskonacno mnogo resnjena \n");
+  // }else
+  // {
+  //   printf("Sistem nema resenja.");
+  // }
+  // 45
+  // double a, b, c, D, x1, x2;
+  // printf("Unesi koeficijent a: \n");
+  // scanf("%lf", &a);
+  // printf("Unesi koeficijent b: \n");
+  // scanf("%lf", &b);
+  // printf("Unesi koeficijent c: \n");
+  // scanf("%lf", &c);
+  // if (a != 0 && D > 0)
+  // {
+  //   D = pow(b, 2) - 4 * a * c;
+  //   x1 = (-b + sqrt(D)) / 2 * a;
+  //   x2 = (-b - sqrt(D)) / 2 * a;
+  //   printf("Resenja su x1: %lf, x2: %lf", x1, x2);
+  // }
+  // else if (a != 0 && D == 0)
+  // {
+  //   D = pow(b, 2) - 4 * a * c;
+  //   x1 = x2 = -b / 2 * a;
+  //   printf("Resenja su ista, x1: %lf, x2: %lf", x1, x2);
+  // }
+  // else if (a != 0 && D < 0)
+  // {
+  //   D = pow(b, 2) - 4 * a * c;
+  //   x1 = (-b + sqrt(D)) / 2 * a;
+  //   x2 = (-b - sqrt(D)) / 2 * a;
+  //   printf("Resenja su x1: %lf + i, x2: %lf + i", x1, x2);
+  // }
+  // else if (a == 0 & b != 0)
+  // {
+  //   x1 = x2 = -c / b;
+  //   printf("Resenja su x1: %lf, x2: %lf", x1, x2);
+  // }
+  // else
+  // {
+  //   printf("Nema resenja ");
+  // }
+  // 46
+  // int m, n;
+  // float s;
+  // printf("Unesi m= \n"); scanf("%d", &m);
+  // printf("Unesi n= \n"); scanf("%d", &n);
+  // s = 1;
+  // for (int i = 0; i <= m; i++)
+  // {
+  //   s = s* (n+ i * m);
+  // }
+  // printf("S = %f \n", s);
+  // 47
+  // int n,faktorijel;
+  // float s, q;
+  // printf("Unesi n= \n");
+  // scanf("%d", &n);
+  // s = 0;
+  // q = 0;
+  // faktorijel = 1;
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   faktorijel = faktorijel * i;
+  //   q = q+1./ (1+i); // ovo smo koristili da bi donji red racunali a inicilizovali smo s q
+  //   s = s +  faktorijel / q;
+  // }
+  // printf("S = %f, faktorijel = %d", s,faktorijel);
+  // 48
+  // int n;
+  // float x, s, p;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi x: \n");
+  // scanf("%f", &x);
+  // s = 0;
+  // p = 1;
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   p = p * sin(x);
+  //   s = s + p;
+  // }
+  // printf("S = %f", s);
+  // 49
+  // int n;
+  // float x, s, p;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi x: \n");
+  // scanf("%f", &x);
+  // s = 0;
+  // p = 1;
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   p = p * x;
+  //   s = s + cos(p);
+  // }
+  // printf("S = %f", s);
+  // 50
+  // int n;
+  // float s, proizvodKorena;
+  // printf("n = \n");
+  // scanf("%d", &n);
+  // s = 1;
+  // proizvodKorena = 0;
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   proizvodKorena = sqrt(proizvodKorena + 2);
+  //   s = s / proizvodKorena;
+  // }
+  // printf("Prozivod korena: %f \n, Suma: %f \n", proizvodKorena,s);
+  int n;
+  float br, max;
+  printf("Unesi n = \n");
   scanf("%d", &n);
-  for (int i = 1; i <= n; i++)
+  printf("Unesi prvi br = \n");
+  scanf("%f", &br);
+  max = br;
+  for (int i = 2; i <= n; i++)
   {
-    f = f * i;
-    s = s + f;
+    printf("Unesite %d  brojeva \n", n);
+    scanf("%f", &br);
+    if (br > max)
+    {
+      max = br;
+    }
   }
-  printf("Suma: %f \n", s);
+  printf("Najveci uneti broj je %f", max);
 
   return 0;
 }
