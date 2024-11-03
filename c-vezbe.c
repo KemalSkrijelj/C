@@ -707,23 +707,90 @@ int main()
   //   s = s / proizvodKorena;
   // }
   // printf("Prozivod korena: %f \n, Suma: %f \n", proizvodKorena,s);
+  // int n;
+  // float br, max;
+  // printf("Unesi n = \n");
+  // scanf("%d", &n);
+  // printf("Unesi prvi br = \n");
+  // scanf("%f", &br);
+  // max = br;
+  // for (int i = 2; i <= n; i++)
+  // {
+  //   printf("Unesite %d  brojeva \n", n);
+  //   scanf("%f", &br);
+  //   if (br > max)
+  //   {
+  //     max = br;
+  //   }
+  // }
+  // printf("Najveci uneti broj je %f", max);
+  // Zadaci za kolokvijum
+  // 1
+  // int x, y, z, q;
+  // printf("Unesi sat poletanja aviona \n");
+  // scanf("%d", &x);
+  // printf("Unesi minute poletanja aviona \n");
+  // scanf("%d", &y);
+  // printf("Unesi sekunde poletanja aviona \n");
+  // scanf("%d", &z);
+  // printf("Unesite vreme leta (sekunde):\n");
+  // scanf("%d", &q);
+
+  // int ukupneSekunde = x * 3600 + y * 60 + z + q;
+
+  // int noveSekunde = ukupneSekunde % 60;
+  // int ukupniMinuti = ukupneSekunde / 60;
+  // int noveMinute = ukupniMinuti % 60;
+  // int noviSati = (ukupniMinuti / 60) % 24;
+
+  // printf("Vreme prizemljenja aviona je %dH:%dM:%dS", noviSati, noveMinute, noveSekunde);
+  // 2
+  // float a, b, x1, x2, y1, y2, S, T;
+  // printf("Unesi koeficijente prave a i b: \n");
+  // scanf("%f %f", &a, &b);
+
+  // printf("Unesite koordinate tacke S (X1, Y1):\n");
+  // scanf("%f %f", &x1, &y1);
+  // printf("Unesite koordinate tacke T (X2, Y2):\n");
+  // scanf("%f %f", &x2, &y2);
+
+  // float tackaS = a * x1 + b;
+  // float tackaT = a * x2 + b;
+
+  // if ((y1 > tackaS && y2 > tackaT) || (y1 < tackaS && y2 < tackaT))
+  // {
+  //   printf("Tacke S i T se nalaze s iste strane prave y = %.2f %.2f", a, b);
+  // }else
+  // {
+  //   printf("Tacke S i T se nalaze s razlicite strane prave y = %.2f %.2f", a, b);
+  // }
+  // 3
   int n;
-  float br, max;
-  printf("Unesi n = \n");
+  long long faktorijel;
+  printf("Unesi n broj: \n");
   scanf("%d", &n);
-  printf("Unesi prvi br = \n");
-  scanf("%f", &br);
-  max = br;
-  for (int i = 2; i <= n; i++)
+  float S = 0;
+  faktorijel = 1;
+  for (int i = 1; i <= n; i++)
   {
-    printf("Unesite %d  brojeva \n", n);
-    scanf("%f", &br);
-    if (br > max)
+    int k = 3 * i;
+    faktorijel = 1;
+    for (int j = 1; j <= k; j++)
     {
-      max = br;
+      faktorijel *=  j;
+    }
+
+    if (i % 2 == 0)
+    {
+      S = S + faktorijel;
+    }
+    else
+    {
+      S = S - faktorijel;
     }
   }
-  printf("Najveci uneti broj je %f", max);
+  printf("Suma= %.2f \n", S);
+  printf("Faktorijel= %lld", faktorijel);
 
   return 0;
 }
