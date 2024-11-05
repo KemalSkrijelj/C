@@ -246,10 +246,332 @@ int main()
   // printf("a= %d \nb= %d", a, b);
 
   // 12
-  int n;
-  printf("Unesi trocifreni broj: \n");
-  scanf("%d", &n);
+  // int n, noviBroj;
+  // printf("Unesi trocifreni broj: \n");
+  // scanf("%d", &n);
 
-  int srednjaCifra = (n % 100) / 100;
+  // int srednjaCifra = (n % 100) / 10;
+  // int prvaCifra = n / 100;
+  // int zadnjaCifra = n % 10;
+  // if (srednjaCifra >= prvaCifra && srednjaCifra >= zadnjaCifra)
+  // {
+  //   noviBroj = prvaCifra * 100 + srednjaCifra * 10 + zadnjaCifra;
+  //   printf("Novi broj: %d\n", noviBroj);
+  // }
+  // if (zadnjaCifra >= prvaCifra && zadnjaCifra >= srednjaCifra)
+  // {
+  //   noviBroj = prvaCifra * 100 + srednjaCifra * 10 + zadnjaCifra;
+  //   printf("Novi broj: %d\n", noviBroj);
+  // }
+  // if (srednjaCifra >= zadnjaCifra && srednjaCifra >= prvaCifra)
+  // {
+  //   noviBroj = prvaCifra * 100 + srednjaCifra * 10 + zadnjaCifra;
+  //   printf("Novi broj: %d\n", noviBroj);
+  // }
+  // if (prvaCifra >= zadnjaCifra && prvaCifra >= srednjaCifra)
+  // {
+  //   noviBroj = prvaCifra * 100 + srednjaCifra * 10 + zadnjaCifra;
+  //   printf("Novi broj: %d\n", noviBroj);
+  // }
+  // if (prvaCifra >= srednjaCifra && prvaCifra >= zadnjaCifra)
+  // {
+  //   noviBroj = zadnjaCifra * 100 + prvaCifra * 10 + srednjaCifra;
+  //   printf("Novi broj: %d\n", noviBroj);
+  // }
+
+  // 13
+  // int a, b, c;
+
+  // printf("Unesi broj atoma vodonika: \n");
+  // scanf("%d", &a);
+  // printf("Unesi broj atoma sumpora: \n");
+  // scanf("%d", &b);
+  // printf("Unesi broj atoma kiseonika: \n");
+  // scanf("%d", &c);
+  // int brojMolekula = (a / 2 < b) ? (a / 2 < c / 4 ? a / 2 : c / 4) : (b < c / 4 ? b : c / 4);
+
+  // printf("Max broj molekula H2SO4 koji moze formirati je %d", brojMolekula);
+
+  // 14
+  // int a, b, c, d;
+  // printf("Unesi 2 broja horizontalne linije [1,8]");
+  // scanf("%d %d", &a, &b);
+  // printf("Unesi 2 broja vertikalne linije [1,8]");
+  // scanf("%d %d", &c, &d);
+
+  // if ((a + b) % 2 == (c + d) % 2)
+  // {
+  //   printf("Polja su iste boje");
+  // }
+  // else
+  // {
+  //   printf("Polja su razlicite boje");
+  // }
+  // 15
+  // int n, m;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // int prvaCifra = n / 100;
+  // int drugaCifra = (n % 100) / 10;
+  // int zadnjaCifra = n % 10;
+  // printf("N broj je %d  \n", n);
+  // if (prvaCifra > drugaCifra)
+  // {
+  //   int pomocnaVarijabla = prvaCifra;
+  //   prvaCifra = drugaCifra;
+  //   drugaCifra = pomocnaVarijabla;
+  // }
+  // if (prvaCifra > zadnjaCifra)
+  // {
+  //   int pomocnaVarijabla = prvaCifra;
+  //   prvaCifra = zadnjaCifra;
+  //   zadnjaCifra = pomocnaVarijabla;
+  // }
+  // if (drugaCifra > zadnjaCifra)
+  // {
+  //   int pomocnaVarijabla = drugaCifra;
+  //   drugaCifra = zadnjaCifra;
+  //   zadnjaCifra = pomocnaVarijabla;
+  // }
+
+  // if (prvaCifra == 0)
+  // {
+  //   if (drugaCifra != 0)
+  //   {
+  //     int pomocna = prvaCifra;
+  //     prvaCifra = drugaCifra;
+  //     drugaCifra = pomocna;
+  //   }
+  //   else
+  //   {
+  //     int pomocna = prvaCifra;
+  //     prvaCifra = zadnjaCifra;
+  //     zadnjaCifra = pomocna;
+  //   }
+  // }
+
+  // m = prvaCifra * 100 + drugaCifra * 10 + zadnjaCifra;
+
+  // printf("Novi broj m: %d", m);
+
+  // 16
+  // float x, y;
+  // printf("Unesi X: \n ");
+  // scanf("%f", &x);
+
+  // if (x == 0)
+  // {
+  //   y = x;
+  // }
+  // else if (1 <= x <= 9)
+  // {
+  //   y = pow(x, 5) / 5;
+  // }
+  // else if (-7 <= x <= -1)
+  // {
+  //   y = sqrt((x * x) + 1);
+  // }
+  // else
+  // {
+  //   y = 0;
+  // }
+  // printf("Vas broj je: %.2f", y);
+  // 17
+
+  // int x, y = 0, pomocna, zadnjaCifra;
+
+  // printf("Unesi x: \n");
+  // scanf("%d", &x);
+
+  // pomocna = x;
+  // printf("X = %d \n", x);
+
+  // while (pomocna > 0)
+  // {
+  //   zadnjaCifra = pomocna % 10;
+  //   y = y * 10 + zadnjaCifra;
+  //   pomocna /= 10;
+  // }
+
+  // printf("Y = %d \n", y);
+
+  // int zbir = x + y;
+
+  // int zbirBrojeva = (int)sqrt(zbir);
+  // if (zbirBrojeva * zbirBrojeva == zbir && zbir >= 0)
+  // {
+  //   printf("X i Y je potpun kvadrat\n");
+  // }
+  // else
+  // {
+  //   printf("X i Y nije potpun kvadrat\n");
+  // }
+  // 18
+  // int x;
+  // printf("Unesi x: \n");
+  // scanf("%d", &x);
+  // int pomocna;
+  // int a = 0;
+  // int b = 1;
+  // printf("Fibonacijev niz do %d.  broja: \n", x);
+  // for (int i = 1; i <= x; i++)
+  // {
+  //   printf("%d \n", a);
+  //   pomocna = a + b;
+  //   a = b;
+  //   b = pomocna;
+  // }
+  // 19
+  // int sum;
+  // for (int i = 1; i <= 1000; i++)
+  // {
+  //   sum = 0;
+  //   for (int j = 1; j <= i / 2; j++)
+  //   {
+  //     if (i % j == 0)
+  //     {
+  //       sum = sum + j;
+  //     }
+  //   }
+  //   if (sum == i)
+  //   {
+  //     printf("Savrseni brojevi su %d \n", i);
+  //   }
+  // }
+  // 20
+  // int a, b;
+  // printf("Unesi dva broja: \n");
+  // scanf("%d %d", &a, &b);
+
+  // while (b != 0)
+  // {
+  //   int pomocna = b;
+  //   b = a % b;
+  //   a = pomocna;
+  // }
+
+  // printf("NZD je %d", a);
+  // 21
+  // int n, pomocna, sum;
+  // sum = 0;
+  // int a = 0;
+  // int b = 1;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   printf("%d \n", a);
+  //   sum += a;
+  //   pomocna = a + b;
+  //   a = b;
+  //   b = pomocna;
+  // }
+  // printf("Suma: %d \n", sum);
+  // 22
+  // int brojFirme, sum;
+  // printf("Unesi broj firme, mora imati 5 cifara: \n");
+  // scanf("%d", &brojFirme);
+  // int prvaCifra = brojFirme / 10000;
+  // int drugaCifra = (brojFirme / 1000) % 10;
+  // int skracenBroj = brojFirme / 100;
+  // int srednjaCifra = skracenBroj % 10;
+  // int cetvrtaCifra = (brojFirme / 10) % 10;
+  // int zadnjaCifra = brojFirme % 10;
+
+  // sum = prvaCifra + drugaCifra + srednjaCifra + cetvrtaCifra + zadnjaCifra;
+  // if (srednjaCifra == 5 && sum % 3 == 0)
+  // {
+  //   printf("Ovo je reg. broj firme");
+  // }
+  // else
+  // {
+  //   printf("Ovo nije reg. broj firme");
+  // }
+  // 23
+  // int a, b;
+  // for (int a = 1; a <= 45; a++)
+  // {
+  //   for (int b = 1; b <= 45; b++)
+  //   {
+  //     if ((a * a * a + b * b * b) % 3 == 1)
+  //     {
+  //       printf("Brojevi su: a = %d, b = %d\n", a, b);
+  //     }
+  //   }
+  // }
+  // 24
+  // int n, m;
+  // float P = 1;
+  // printf("Upisi n: \n");
+  // scanf("%d", &n);
+  // printf("Upisi m: \n");
+  // scanf("%d", &m);
+  // for (int i = 0; i <= m; i++)
+  // {
+  //   P *= (n + i * m);
+  // }
+  // printf("P=%f \n", P);
+  // 25
+  // int n, faktorijel, sum;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // sum = 0;
+  // faktorijel = 1;
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   faktorijel = 1;
+  //   for (int j = 1; j <= i; j++)
+  //   {
+  //     faktorijel = faktorijel * j;
+  //   }
+
+  //   sum += faktorijel;
+  // }
+  // printf("Suma: %d", sum);
+  // 26
+  // for (int i = 1; i <= 9; i++)
+  // {
+  //   for (int x = i - 1; x < i + 1; x++)
+  //   {
+  //     if (x < 1 || x > 9)
+  //       continue;
+  //     for (int y = x - 1; y < x + 1; y++)
+  //     {
+  //       if (y < 1 || y > 9)
+  //         continue;
+  //       printf("%d%d%d\n", i, x, y);
+  //     }
+  //   }
+  // }
+  // 27
+  // for (int n = 1; n <= 9999; n++)
+  // {
+  //   int sum = n * (n + 1) / 2;
+
+  //   if (sum <= 9999)
+  //   {
+  //     printf("Suma: %d \n", sum);
+  //   }
+  //   else
+  //   {
+  //     break;
+  //   }
+  // }
+  //
+  int n, faktorijel, sum;
+  printf("Unesi n: \n");
+  scanf("%d", &n);
+  sum = 0;
+  for (int i = 1; i <= n; i++)
+  {
+    faktorijel = 1;
+    for (int j = 1; j <= i; i++)
+    {
+      faktorijel = faktorijel * j;
+    }
+    sum = sum + faktorijel;
+  }
+  printf("Sum: %d \n", sum);
+
   return 0;
 }
