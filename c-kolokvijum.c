@@ -558,20 +558,21 @@ int main()
   //   }
   // }
   //
-  int n, faktorijel, sum;
-  printf("Unesi n: \n");
-  scanf("%d", &n);
-  sum = 0;
-  for (int i = 1; i <= n; i++)
-  {
-    faktorijel = 1;
-    for (int j = 1; j <= i; i++)
-    {
-      faktorijel = faktorijel * j;
-    }
-    sum = sum + faktorijel;
-  }
-  printf("Sum: %d \n", sum);
+  // int n, faktorijel, sum;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // sum = 0;
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   faktorijel = 1;
+  //   for (int j = 1; j <= i; i++)
+  //   {
+  //     faktorijel = faktorijel * j;
+  //   }
+  //   sum = sum + faktorijel;
+  // }
+  // printf("Sum: %d \n", sum);
+  ////////////////////////
 
   return 0;
 }
