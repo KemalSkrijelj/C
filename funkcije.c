@@ -1,41 +1,54 @@
 #include <stdio.h>
-float zbir(float a, float b)
-{
-  return (a + b);
+// int sabiranje(int a, int b)
+// {
+//   int rezultat;
+//   rezultat = a + b;
+//   return rezultat;
+// }
+int zbir (int a, int b){
+  return (a+b);
 }
-float proizvod(float a, float b)
-{
-  return (a * b);
+int proizvod (int a, int b){
+  return (a*b);
 }
-float deljenje(float a, float b)
-{
-  return (a / b);
+float kolicnik (float a, float b){
+  return (a/b);
 }
-float oduzimanje(float a, float b)
-{
-  return (a - b);
+int kvadrat(int a){
+  return (a*a);
 }
-float kvadrat(float a)
-{
-  return a * a;
+int kub(int a){
+  return (a*a*a);
 }
-float kub(float a)
-{
-  return a * a * a;
-}
-
 int main()
 {
-  int a;
-  printf("Unesi a: \n");
-  scanf("%d", &a);
-  int faktorijel = 1;
-  for (int i = 1; i <= a; i++)
-  {
-    faktorijel *= i;
-  }
-  printf("Faktorijel: %d", faktorijel);
-  
+  int x,y;
+  float z1,z2, z3;
+  printf("Unesi x: \n"); scanf("%d", &x);
+  printf("Unesi y: \n"); scanf("%d", &y);
+  z1 = x + kvadrat(y);
+  printf("Z1: %f \n", z1);
+  z2 = kub(x) - kolicnik(x, y);
+  printf("Z2: %f \n", z2);
+  z3 = proizvod(x,y) + (5 - y);
+  printf("Z3: %f \n", z3);
+  // int a, b, zbir;
+  // printf("Unesi a: \n");
+  // scanf("%d", &a);
+  // printf("Unesi b: \n");
+  // scanf("%d", &b);
+  // zbir = sabiranje(a,b);
+  // printf("Zbir je: %d", zbir);
+  // int a;
+  // printf("Unesi a: \n");
+  // scanf("%d", &a);
+  // int faktorijel = 1;
+  // for (int i = 1; i <= a; i++)
+  // {
+  //   faktorijel *= i;
+  // }
+  // printf("Faktorijel: %d", faktorijel);
+
   // float a, b, x, z1, y, z2, z3;
   // printf("Unesi a: \n");
   // scanf("%f", &a);
