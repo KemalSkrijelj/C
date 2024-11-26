@@ -64,34 +64,128 @@
 //   return s;
 // }
 /////////////////////////////////////////////
-int NZD(int a, int b){
-  int c;
-  while (b != 0)
+// int NZD(int a, int b){
+//   int c;
+//   while (b != 0)
+//   {
+//     c = b;
+//     b = a % b;
+//     a = c;
+//   }
+//   return a;
+// }
+// float NZS(int a, int b){
+//   return a*b/NZD(a,b);
+// }
+//////////////////////////////////////////////
+// int faktorijel(int n){
+//   int fakt = 1;
+//   for (int i = 1; i <= n; i++)
+//   {
+//     fakt *= i; 
+//   }
+//   return fakt;
+// }
+//////////////////////////////////////////////
+// int faktorijel(int n){
+//   int fakt = 1;
+//   for (int i = 1; i <= n; i++)
+//   {
+//     fakt *= i; 
+//   }
+//   return fakt;
+// }
+//////////////////////////////////////////////
+// double stepen(double a, int b){
+//   int i, negative;
+//   double s=1.0;
+//   negative = b < 0;
+//   if(negative){
+//     b = -b;
+//   }
+//   for(i=0; i<b; i++){
+//     s*=a;
+//   }
+//   if(negative) {
+//     return(1/s);
+//   }  
+//   else{
+//     return(s);
+//   }
+// }
+//////////////////////////////////////////////
+double Stepen (double x, int n){
+  double s = 1.0;
+  for (int i = 0; i < n; i++)
   {
-    c = b;
-    b = a % b;
-    a = c;
+    s *= x;
   }
-  return a;
-}
-float NZS(int a, int b){
-  return a*b/NZD(a,b);
+  return s;
 }
 int main() {
-  int a,b;
-  while (1)
-  {
-     printf("Unesite dva prirodna broja (nula za prekid): ");
-     scanf("%d %d", &a, &b);
-       if (a == 0 || b == 0) {
-            printf("Uneli ste nulu. Kraj programa.\n");
-            break;
-        }
-    int nzs = NZS(a,b);
-    int nzd = NZD(a,b);
-    printf("Nzs = %d \n", nzs);
-    printf("Nzd = %d \n", nzd);
-  }
+  int m;
+  double r, A, p, k;
+  printf("Iznos kredita: \n"); scanf("%lf", &p);
+  printf("Mesecna kamata: \n"); scanf("%lf", &k);
+  printf("Broj mesecnih rata: \n"); scanf("%d", &m);
+  A = Stepen(1+k, m);
+  r = (A*p*k)/ (A - 1);
+  printf("Mesecna rata za otplatu kredita je: %.2f",r);
+//////////////////////////////////////////////
+
+  // double a, rezultat; 
+  // int b;
+  // printf("\n Osnova: ");
+  // scanf("%lf", &a);
+  // printf("\n Stepen: ");
+  // scanf("%d", &b);
+  // rezultat=stepen(a,b);
+  // printf("\n Rezultat= %.2f", rezultat);
+//////////////////////////////////////////////
+  // int a, b, c;
+  // for (a = 1; a <=9; a++){
+  //   for (b = 1; b <= 9; b++){
+  //     for (c = 1; c <= 9; c++)
+  //     {
+  //       if ((a*100+b*10+c) == (faktorijel(a)+faktorijel(b)+faktorijel(c)) )
+  //       {
+  //           printf("%d", a*100+b*10+c);
+  //       }
+  //     }
+  //   }
+  // }
+  
+//////////////////////////////////////////////
+  // int n, s = 0;
+  // printf("Unesi n: \n"); scanf("%d", &n);
+  // for (int i = 1; i <= n; i++)
+  // {
+  //   s += faktorijel(i);
+  // }
+  // printf("Suma = %d", s);
+//////////////////////////////////////////////
+  // int n, k,c;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi k: \n");
+  // scanf("%d", &k);
+  // c = faktorijel(n) / (faktorijel(k) * faktorijel(n - k));
+  // printf("C = %d \n", c);
+  ////////////////////////////////////////////
+  // int a,b;
+  // while (1)
+  // {
+  //    printf("Unesite dva prirodna broja (nula za prekid): ");
+  //    scanf("%d %d", &a, &b);
+  //      if (a == 0 || b == 0) {
+  //           printf("Uneli ste nulu. Kraj programa.\n");
+  //           break;
+  //       }
+  //   int nzs = NZS(a,b);
+  //   int nzd = NZD(a,b);
+  //   printf("Nzs = %d \n", nzs);
+  //   printf("Nzd = %d \n", nzd);
+  // }
   
   ////////////////////////////////////////////
   // int donjaGranica, gornjaGranica;
