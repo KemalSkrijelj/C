@@ -114,23 +114,111 @@
 //   }
 // }
 //////////////////////////////////////////////
-double Stepen (double x, int n){
-  double s = 1.0;
-  for (int i = 0; i < n; i++)
-  {
-    s *= x;
-  }
-  return s;
+// double Stepen (double x, int n){
+//   double s = 1.0;
+//   for (int i = 0; i < n; i++)
+//   {
+//     s *= x;
+//   }
+//   return s;
+// }
+//////////////////////////////////////////////
+// int Prost(int broj){
+//   for (int i = 2; i < broj; i++)
+//   {
+//     if (broj % i == 0){
+//       return 0;
+//     }
+//   }
+//   return 1;
+// }
+//////////////////////////////////////////////
+// int sumaKubova (int n){
+//   int s = 0;
+
+//   while (n != 0)
+//   {
+//     int cifra = n % 10;
+//     s += cifra * cifra * cifra;
+//     n = n / 10; 
+//   }
+//   return s;
+// }
+// int Amstrongov(int n){
+//   if (n == sumaKubova(n))
+//   {
+//     return 1;
+//   }
+//   return 0;
+// }
+//////////////////////////////////////////////
+// int sumaCifara(int n){
+//   int suma = 0;
+//   while (n != 0)
+//   {
+//     int cifra = n % 10;
+//     suma += cifra;
+//     n /= 10;
+//   }
+//   return suma;
+// }
+// int Nivenov(int n){
+//   if(n % sumaCifara(n) == 0){
+//     return 1;
+//   }
+//   return 0;
+// }
+//////////////////////////////////////////////
+  float x, xmin, dx;
+float f1(float x){
+  return sin(x)/ x;
+}
+float f2(float x){
+  return f1(x) * f1(x);
 }
 int main() {
-  int m;
-  double r, A, p, k;
-  printf("Iznos kredita: \n"); scanf("%lf", &p);
-  printf("Mesecna kamata: \n"); scanf("%lf", &k);
-  printf("Broj mesecnih rata: \n"); scanf("%d", &m);
-  A = Stepen(1+k, m);
-  r = (A*p*k)/ (A - 1);
-  printf("Mesecna rata za otplatu kredita je: %.2f",r);
+  printf("Unesi x-min: \n"); scanf("%f", &xmin);
+  printf("Unesi dx: \n"); scanf("%f", &dx);
+  printf("\nx   f1(x)   f2(x)");
+  for ( x = 1; x >= xmin; x= x-dx)
+  {
+    printf("\n %.2f   %.2f    %.2f ", x, f1(x), f2(x));
+  }
+  
+//////////////////////////////////////////////
+  // for (int i = 99; i <= 199; i++)
+  // {
+  //   if (Nivenov(i)){
+  //     printf("%d \t", i);
+  //   }
+  // }
+  
+//////////////////////////////////////////////
+
+  // for (int i = 99; i <= 999; i++)
+  // {
+  //   if (Amstrongov(i)){
+  //     printf("%d \n", i);
+  //   }
+  // }
+  
+//////////////////////////////////////////////
+  // for (int i = 1; i <= 500 ; i++)
+  // {
+  //   if(Prost(i) == 1){
+  //     printf("%d \n", i);
+  //   }
+  // }
+  
+//////////////////////////////////////////////
+  // int m;
+  // double r, A, p, k;
+  // printf("Iznos kredita: \n"); scanf("%lf", &p);
+  // printf("Mesecna kamata: \n"); scanf("%lf", &k);
+  // printf("Broj mesecnih rata: \n"); scanf("%d", &m);
+  // A = Stepen(1+k, m);
+  // r = (A*p*k)/ (A - 1);
+  // printf("Mesecna rata za otplatu kredita je: %.2f",r);
 //////////////////////////////////////////////
 
   // double a, rezultat; 
