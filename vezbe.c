@@ -169,21 +169,121 @@
 //   return 0;
 // }
 //////////////////////////////////////////////
-  float x, xmin, dx;
-float f1(float x){
-  return sin(x)/ x;
+//   float x, xmin, dx;
+// float f1(float x){
+//   return sin(x)/ x;
+// }
+// float f2(float x){
+//   return f1(x) * f1(x);
+// }
+//////////////////////////////////////////////
+// int komb(int n, int k){
+//   int proizvod = 1;
+//   for(int i = 1; i <= k; i++){
+//     proizvod *= (n - i + 1) / i;
+//   }
+//   return proizvod;
+// }
+//////////////////////////////////////////////
+// int dvostrukiFakt(int n){
+//   int proizvod = 1;
+//   if (n % 2 == 0)
+//   {
+//     while (n >= 2)
+//     {
+//       proizvod *= n;
+//       n -= 2;
+//     } 
+//   }else
+//   {
+//     while (n >= 1)
+//     {
+//       proizvod *= n;
+//       n -= 2;
+//     }
+//   }
+//   return proizvod;
+// }
+//////////////////////////////////////////////
+double Povrsina (double r){
+  return (4*r*r*PI);
 }
-float f2(float x){
-  return f1(x) * f1(x);
+double Zapremina (double r){
+  return ((4./3.)*r*r*r*PI);
 }
+//////////////////////////////////////////////
+// REKURZIVNE FUNKCIJE
+//////////////////////////////////////////////
+// int Faktorijel(int n){
+//   if (n == 1) return 1;
+//   return n*Faktorijel(n-1);
+// }
+//////////////////////////////////////////////
+// int stepen(int a, int b){
+//   if (b == 0){
+//    return 1;
+//   }
+//   else{
+//     return a*stepen(a,b-1);
+//   } 
+// }
 int main() {
-  printf("Unesi x-min: \n"); scanf("%f", &xmin);
-  printf("Unesi dx: \n"); scanf("%f", &dx);
-  printf("\nx   f1(x)   f2(x)");
-  for ( x = 1; x >= xmin; x= x-dx)
-  {
-    printf("\n %.2f   %.2f    %.2f ", x, f1(x), f2(x));
-  }
+  float r, p, z;
+  printf("Unesi r poluprecnik: \n");
+  scanf("%f", &r);
+  p = Povrsina(r);
+  z = Zapremina(r);
+  printf("Povrsina: %.2f \n", p);
+  printf("Zapremina: %.2f", z);
+  // int a, b;
+  // printf("Unesi osnovu a: \n");
+  // scanf("%d", &a);
+  // printf("Unesi stepen b: \n");
+  // scanf("%d", &b);
+  // printf("Stepen broja %d je %d", a, stepen(a,b));
+//////////////////////////////////////////////
+  // int n;
+  // printf("n = \n");
+  // scanf("%d", &n);
+  // printf("Faktorijel = %d", Faktorijel(n));
+//////////////////////////////////////////////
+
+  // int znak = 1, i = 2;
+  // float S = 1,  clan = 1, eps;
+  // printf("Eps: \n");
+  // scanf("%f", &eps);
+  // while (fabs(clan) >= eps)
+  // {
+  //   clan = (float) znak / dvostrukiFakt(i);
+  //   S = S + clan;
+  //   i++;
+  //   znak = -znak;
+  // }
+  // printf("S = %.2f", S);
+//////////////////////////////////////////////
+  // float s;
+  // int n,k,t, znak = 1;  //t-broj ponavljanje petlje
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi k: \n");
+  // scanf("%d", &k);
+  // printf("Unesi t: \n");
+  // scanf("%d", &t);
+  // for (int i = 0; i < t; i++)
+  // {
+  //   s += znak*komb(n,k);
+  //   znak = -znak;
+  // }
+  // printf("Suma = %.2f", s);
+  
+//////////////////////////////////////////////
+  // printf("Unesi x-min: \n"); scanf("%f", &xmin);
+  // printf("Unesi dx: \n"); scanf("%f", &dx);
+  // printf("\nx   f1(x)   f2(x)");
+  // for ( x = 1; x >= xmin; x= x-dx)
+  // {
+  //   printf("\n %.2f   %.2f    %.2f ", x, f1(x), f2(x));
+  // }
   
 //////////////////////////////////////////////
   // for (int i = 99; i <= 199; i++)
