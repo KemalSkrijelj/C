@@ -5,33 +5,116 @@
 //   rezultat = a + b;
 //   return rezultat;
 // }
-int zbir (int a, int b){
-  return (a+b);
+// int zbir (int a, int b){
+//   return (a+b);
+// }
+// int proizvod (int a, int b){
+//   return (a*b);
+// }
+// float kolicnik (float a, float b){
+//   return (a/b);
+// }
+// int kvadrat(int a){
+//   return (a*a);
+// }
+// int kub(int a){
+//   return (a*a*a);
+// }
+// /////////////////////////////////////////
+// double Stepen (double baza, int eksponanta ){
+//   double s = 1.0;
+//   for (int i = 0; i < eksponanta; i++)
+//   {
+//     s *= baza;
+//   }
+//   return s;
+// }
+//////////////////////////////////////////////
+// int Prost(int n){
+//   for (int i = 2; i < n - 1; i++)
+//   {
+//     if (n % i == 0)
+//     {
+//       return 1;
+//     }
+//   }
+//   return 0;
+// }
+////////////////////////////////////////////
+// int Suma (int n){
+//   int s = 0;
+//   while (n != 0)
+//   {
+//     int cifra = n % 10;
+//     s += cifra;
+//     n /= 10;
+//   }
+//   return s;
+// }
+////////////////////////////////////////////
+int sumaKubova(int n){
+  int s = 0;
+  while (n != 0)
+  {
+    int cifra = n % 10;
+    s += cifra*cifra*cifra;
+    n /= 10;
+  }
+  return s;
 }
-int proizvod (int a, int b){
-  return (a*b);
-}
-float kolicnik (float a, float b){
-  return (a/b);
-}
-int kvadrat(int a){
-  return (a*a);
-}
-int kub(int a){
-  return (a*a*a);
+int Amstrongov(int n){
+  if (n == sumaKubova(n))
+  {
+    return n;
+  }
+  return 0;
 }
 int main()
 {
-  int x,y;
-  float z1,z2, z3;
-  printf("Unesi x: \n"); scanf("%d", &x);
-  printf("Unesi y: \n"); scanf("%d", &y);
-  z1 = x + kvadrat(y);
-  printf("Z1: %f \n", z1);
-  z2 = kub(x) - kolicnik(x, y);
-  printf("Z2: %f \n", z2);
-  z3 = proizvod(x,y) + (5 - y);
-  printf("Z3: %f \n", z3);
+  for (int i = 100; i <= 999; i++)
+  {
+    if (i == Amstrongov(i))
+    {
+      printf("%d \t", i);
+    }
+  }
+  ////////////////////////////////////////////
+  // int d, g;
+  // printf("Unesi donju granicu: \n"); scanf("%d", &d); 
+  // printf("Unesi gornju granicu: \n"); scanf("%d", &g);
+  // for (int i = d; i <= g; i++)
+  // {
+  //   printf("\n%d \t %d", i, Suma(i));
+  // }
+  ////////////////////////////////////////////
+  // for (int i = 1; i <= 500; i++)
+  // {
+  //   if (Prost(i) == 0)
+  //   {
+  //     printf("%d \t" , i);
+  //   }
+  // }
+  ////////////////////////////////////////////
+  // int m;
+  // double r,p,k, A;
+  // printf("Unesi kredit: \n"); scanf("%lf", &p);
+  // printf("Mesecna kamata: \n"); scanf("%lf", &k);
+  // printf("Broj mesecnih rata: \n"); scanf("%d", &m);
+  // A = Stepen(1+k, m);
+  // r = (A * p * k) / (A - 1);
+  // printf("Mesecna rata iznosi: %lf \n", r);
+  ////////////////////////////////////////////
+  // int x,y;
+  // float z1,z2, z3;
+  // printf("Unesi x: \n"); scanf("%d", &x);
+  // printf("Unesi y: \n"); scanf("%d", &y);
+  // z1 = x + kvadrat(y);
+  // printf("Z1: %f \n", z1);
+  // z2 = kub(x) - kolicnik(x, y);
+  // printf("Z2: %f \n", z2);
+  // z3 = proizvod(x,y) + (5 - y);
+  // printf("Z3: %f \n", z3);
+  ////////////////////////////////////////////
   // int a, b, zbir;
   // printf("Unesi a: \n");
   // scanf("%d", &a);

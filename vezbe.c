@@ -205,12 +205,12 @@
 //   return proizvod;
 // }
 //////////////////////////////////////////////
-double Povrsina (double r){
-  return (4*r*r*PI);
-}
-double Zapremina (double r){
-  return ((4./3.)*r*r*r*PI);
-}
+// double Povrsina (double r){
+//   return (4*r*r*PI);
+// }
+// double Zapremina (double r){
+//   return ((4./3.)*r*r*r*PI);
+// }
 //////////////////////////////////////////////
 // REKURZIVNE FUNKCIJE
 //////////////////////////////////////////////
@@ -227,14 +227,144 @@ double Zapremina (double r){
 //     return a*stepen(a,b-1);
 //   } 
 // }
+//////////////////////////////////////////////
+// int Prost(int n){
+//   for (int i = 2; i < n; i++)
+//   {
+//     if (n % i == 0)  return 0;
+//   }
+//     return 1;
+  
+// }
+//////////////////////////////////////////////
+// int sumaKubova(int n){
+//   int s = 0;
+//   while (n != 0)
+//   {
+//     int cifra = n % 10;
+//     s += cifra * cifra * cifra;
+//     n = n / 10; 
+//   }
+//   return s;
+// }
+// int Amstrongov(int n){
+//   if (n == sumaKubova(n))
+//   {
+//     return 0;
+//   }
+//   return 1;
+// }
+//////////////////////////////////////////////
+// int sumaCifara (int n){
+//   int s = 0;
+//   while (n != 0)
+//   {
+//     int cifra = n % 10;
+//     s += cifra;
+//     n /= 10;
+//   }
+//   return s;
+// }
+// int Nivenov(int n){
+//   if (n % sumaCifara(n)  == 0)
+//   {
+//     return 0;
+//   }
+//   return 1;
+// }
+//////////////////////////////////////////////
+// double Stepen(double baza, int eksponanta) {
+//   double suma = 1.0;
+//   for (int i = 0; i < eksponanta ; i++)
+//   {
+//     suma *= baza;
+//   }
+//   return suma;
+// }
+//////////////////////////////////////////////
 int main() {
-  float r, p, z;
-  printf("Unesi r poluprecnik: \n");
-  scanf("%f", &r);
-  p = Povrsina(r);
-  z = Zapremina(r);
-  printf("Povrsina: %.2f \n", p);
-  printf("Zapremina: %.2f", z);
+  int a=2, b=0, c=1, d=1;
+  int pozicija = 4;
+  int pocetnaA = 2, pocetnaB = 0, pocetnaC = 1, pocetnaD = 1;
+  int pocetniBroj = a+b+c+d;
+  while (1){
+    int sledeca = (a+b+c+d) % 10;
+
+    a = b;
+    b = c;
+    c = d;
+    d = sledeca;
+
+    pozicija++;
+
+    if (a == pocetnaA && b == pocetnaB && c == pocetnaC && d == pocetnaD)
+    {
+      printf("Pocetna sekvenca 2011 ponavlja se na poziciji: %d", pozicija - 3);
+      break;
+    }
+    
+  }
+  
+/////////////////////////////////////////
+// int k,i = 1, niz = 1;
+// printf("k = \n"); scanf("%d", &k);
+// while (i <= k)
+// {
+//   niz = niz*10;
+//   i++;
+// }
+// printf("Na %d se nalazi broj %d: \n",k, niz);
+// ////////////////////////////////////////////////
+// int x, obrnuti = 0;
+// printf("Unesi broj: \n"); scanf("%d", &x);
+// while (x != 0)
+// {
+//   obrnuti = obrnuti * 10 + x % 10;
+//   x /= 10; 
+// }
+// printf("Obrnuti: %d \n", obrnuti);
+//////////////////////////////////////////////
+  // double baza;
+  // int eksponanta;
+  // printf("Unesi broj: \n"); scanf("%lf", &baza);
+  // printf("Unesi stepen: \n"); scanf("%d", &eksponanta);
+  // printf("Baza %.2lf stepenovana brojem %d je %.2lf",baza,eksponanta, Stepen(baza, eksponanta));
+//////////////////////////////////////////////
+  // for(int i = 101; i <= 200; i++){
+  //   if (Nivenov(i) == 0)
+  //   {
+  //     printf("%d \t", i);
+  //   }
+  // }
+//////////////////////////////////////////////
+  // for (int i = 100; i <= 999; i++)
+  // {
+  //   if (Amstrongov(i) == 0)
+  //   {
+  //     printf("%d \t", i);
+  //   }
+  // }
+//////////////////////////////////////////////
+  // int n;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // for (int i = 1; i <= 500; i++)
+  // {
+  //   if (Prost(i) == 1)
+  //   {
+  //     printf("%d \t", i);
+  //   }
+    
+  // }
+//////////////////////////////////////////////
+  // float r, p, z;
+  // printf("Unesi r poluprecnik: \n");
+  // scanf("%f", &r);
+  // p = Povrsina(r);
+  // z = Zapremina(r);
+  // printf("Povrsina: %.2f \n", p);
+  // printf("Zapremina: %.2f", z);
+//////////////////////////////////////////////
   // int a, b;
   // printf("Unesi osnovu a: \n");
   // scanf("%d", &a);
