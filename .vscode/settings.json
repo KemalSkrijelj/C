@@ -4,5 +4,6 @@
     "*.js": "javascriptreact",
     "stdio.h": "c",
     "string.h": "c"
-  }
+  },
+  "json.format.enable": true
 }

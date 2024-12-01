@@ -777,7 +777,7 @@ int main()
     faktorijel = 1;
     for (int j = 1; j <= k; j++)
     {
-      faktorijel *=  j;
+      faktorijel *= j;
     }
 
     if (i % 2 == 0)

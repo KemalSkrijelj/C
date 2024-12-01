@@ -52,17 +52,19 @@
 //   return s;
 // }
 ////////////////////////////////////////////
-int sumaKubova(int n){
+int sumaKubova(int n)
+{
   int s = 0;
   while (n != 0)
   {
     int cifra = n % 10;
-    s += cifra*cifra*cifra;
+    s += cifra * cifra * cifra;
     n /= 10;
   }
   return s;
 }
-int Amstrongov(int n){
+int Amstrongov(int n)
+{
   if (n == sumaKubova(n))
   {
     return n;
@@ -80,7 +82,7 @@ int main()
   }
   ////////////////////////////////////////////
   // int d, g;
-  // printf("Unesi donju granicu: \n"); scanf("%d", &d); 
+  // printf("Unesi donju granicu: \n"); scanf("%d", &d);
   // printf("Unesi gornju granicu: \n"); scanf("%d", &g);
   // for (int i = d; i <= g; i++)
   // {

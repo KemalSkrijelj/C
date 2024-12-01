@@ -28,7 +28,7 @@
 //   {
 //     S += i*i;
 //   }
-//   return S; 
+//   return S;
 // }
 // int zbirParnihKvadrata(int a, int b){
 //   int S = 0;
@@ -38,9 +38,9 @@
 //     {
 //        S += i*i;
 //     }
-    
+
 //   }
-//   return S; 
+//   return S;
 // }
 // int zbirNeparnihKvadrata(int a, int b){
 //   int S = 0;
@@ -51,7 +51,7 @@
 //        S += i*i;
 //     }
 //   }
-//   return S; 
+//   return S;
 // }
 /////////////////////////////////////////////
 // int sumaCifara (int a){
@@ -82,7 +82,7 @@
 //   int fakt = 1;
 //   for (int i = 1; i <= n; i++)
 //   {
-//     fakt *= i; 
+//     fakt *= i;
 //   }
 //   return fakt;
 // }
@@ -91,7 +91,7 @@
 //   int fakt = 1;
 //   for (int i = 1; i <= n; i++)
 //   {
-//     fakt *= i; 
+//     fakt *= i;
 //   }
 //   return fakt;
 // }
@@ -108,7 +108,7 @@
 //   }
 //   if(negative) {
 //     return(1/s);
-//   }  
+//   }
 //   else{
 //     return(s);
 //   }
@@ -140,7 +140,7 @@
 //   {
 //     int cifra = n % 10;
 //     s += cifra * cifra * cifra;
-//     n = n / 10; 
+//     n = n / 10;
 //   }
 //   return s;
 // }
@@ -193,7 +193,7 @@
 //     {
 //       proizvod *= n;
 //       n -= 2;
-//     } 
+//     }
 //   }else
 //   {
 //     while (n >= 1)
@@ -225,7 +225,7 @@
 //   }
 //   else{
 //     return a*stepen(a,b-1);
-//   } 
+//   }
 // }
 //////////////////////////////////////////////
 // int Prost(int n){
@@ -234,7 +234,7 @@
 //     if (n % i == 0)  return 0;
 //   }
 //     return 1;
-  
+
 // }
 //////////////////////////////////////////////
 // int sumaKubova(int n){
@@ -243,7 +243,7 @@
 //   {
 //     int cifra = n % 10;
 //     s += cifra * cifra * cifra;
-//     n = n / 10; 
+//     n = n / 10;
 //   }
 //   return s;
 // }
@@ -282,13 +282,15 @@
 //   return suma;
 // }
 //////////////////////////////////////////////
-int main() {
-  int a=2, b=0, c=1, d=1;
+int main()
+{
+  int a = 2, b = 0, c = 1, d = 1;
   int pozicija = 4;
   int pocetnaA = 2, pocetnaB = 0, pocetnaC = 1, pocetnaD = 1;
-  int pocetniBroj = a+b+c+d;
-  while (1){
-    int sledeca = (a+b+c+d) % 10;
+  int pocetniBroj = a + b + c + d;
+  while (1)
+  {
+    int sledeca = (a + b + c + d) % 10;
 
     a = b;
     b = c;
@@ -302,41 +304,40 @@ int main() {
       printf("Pocetna sekvenca 2011 ponavlja se na poziciji: %d", pozicija - 3);
       break;
     }
-    
   }
-  
-/////////////////////////////////////////
-// int k,i = 1, niz = 1;
-// printf("k = \n"); scanf("%d", &k);
-// while (i <= k)
-// {
-//   niz = niz*10;
-//   i++;
-// }
-// printf("Na %d se nalazi broj %d: \n",k, niz);
-// ////////////////////////////////////////////////
-// int x, obrnuti = 0;
-// printf("Unesi broj: \n"); scanf("%d", &x);
-// while (x != 0)
-// {
-//   obrnuti = obrnuti * 10 + x % 10;
-//   x /= 10; 
-// }
-// printf("Obrnuti: %d \n", obrnuti);
-//////////////////////////////////////////////
+
+  /////////////////////////////////////////
+  // int k,i = 1, niz = 1;
+  // printf("k = \n"); scanf("%d", &k);
+  // while (i <= k)
+  // {
+  //   niz = niz*10;
+  //   i++;
+  // }
+  // printf("Na %d se nalazi broj %d: \n",k, niz);
+  // ////////////////////////////////////////////////
+  // int x, obrnuti = 0;
+  // printf("Unesi broj: \n"); scanf("%d", &x);
+  // while (x != 0)
+  // {
+  //   obrnuti = obrnuti * 10 + x % 10;
+  //   x /= 10;
+  // }
+  // printf("Obrnuti: %d \n", obrnuti);
+  //////////////////////////////////////////////
   // double baza;
   // int eksponanta;
   // printf("Unesi broj: \n"); scanf("%lf", &baza);
   // printf("Unesi stepen: \n"); scanf("%d", &eksponanta);
   // printf("Baza %.2lf stepenovana brojem %d je %.2lf",baza,eksponanta, Stepen(baza, eksponanta));
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // for(int i = 101; i <= 200; i++){
   //   if (Nivenov(i) == 0)
   //   {
   //     printf("%d \t", i);
   //   }
   // }
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // for (int i = 100; i <= 999; i++)
   // {
   //   if (Amstrongov(i) == 0)
@@ -344,7 +345,7 @@ int main() {
   //     printf("%d \t", i);
   //   }
   // }
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // int n;
   // printf("Unesi n: \n");
   // scanf("%d", &n);
@@ -354,9 +355,9 @@ int main() {
   //   {
   //     printf("%d \t", i);
   //   }
-    
+
   // }
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // float r, p, z;
   // printf("Unesi r poluprecnik: \n");
   // scanf("%f", &r);
@@ -364,19 +365,19 @@ int main() {
   // z = Zapremina(r);
   // printf("Povrsina: %.2f \n", p);
   // printf("Zapremina: %.2f", z);
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // int a, b;
   // printf("Unesi osnovu a: \n");
   // scanf("%d", &a);
   // printf("Unesi stepen b: \n");
   // scanf("%d", &b);
   // printf("Stepen broja %d je %d", a, stepen(a,b));
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // int n;
   // printf("n = \n");
   // scanf("%d", &n);
   // printf("Faktorijel = %d", Faktorijel(n));
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
 
   // int znak = 1, i = 2;
   // float S = 1,  clan = 1, eps;
@@ -390,7 +391,7 @@ int main() {
   //   znak = -znak;
   // }
   // printf("S = %.2f", S);
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // float s;
   // int n,k,t, znak = 1;  //t-broj ponavljanje petlje
   // printf("Unesi n: \n");
@@ -405,8 +406,8 @@ int main() {
   //   znak = -znak;
   // }
   // printf("Suma = %.2f", s);
-  
-//////////////////////////////////////////////
+
+  //////////////////////////////////////////////
   // printf("Unesi x-min: \n"); scanf("%f", &xmin);
   // printf("Unesi dx: \n"); scanf("%f", &dx);
   // printf("\nx   f1(x)   f2(x)");
@@ -414,16 +415,16 @@ int main() {
   // {
   //   printf("\n %.2f   %.2f    %.2f ", x, f1(x), f2(x));
   // }
-  
-//////////////////////////////////////////////
+
+  //////////////////////////////////////////////
   // for (int i = 99; i <= 199; i++)
   // {
   //   if (Nivenov(i)){
   //     printf("%d \t", i);
   //   }
   // }
-  
-//////////////////////////////////////////////
+
+  //////////////////////////////////////////////
 
   // for (int i = 99; i <= 999; i++)
   // {
@@ -431,16 +432,16 @@ int main() {
   //     printf("%d \n", i);
   //   }
   // }
-  
-//////////////////////////////////////////////
+
+  //////////////////////////////////////////////
   // for (int i = 1; i <= 500 ; i++)
   // {
   //   if(Prost(i) == 1){
   //     printf("%d \n", i);
   //   }
   // }
-  
-//////////////////////////////////////////////
+
+  //////////////////////////////////////////////
   // int m;
   // double r, A, p, k;
   // printf("Iznos kredita: \n"); scanf("%lf", &p);
@@ -449,9 +450,9 @@ int main() {
   // A = Stepen(1+k, m);
   // r = (A*p*k)/ (A - 1);
   // printf("Mesecna rata za otplatu kredita je: %.2f",r);
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
 
-  // double a, rezultat; 
+  // double a, rezultat;
   // int b;
   // printf("\n Osnova: ");
   // scanf("%lf", &a);
@@ -459,7 +460,7 @@ int main() {
   // scanf("%d", &b);
   // rezultat=stepen(a,b);
   // printf("\n Rezultat= %.2f", rezultat);
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // int a, b, c;
   // for (a = 1; a <=9; a++){
   //   for (b = 1; b <= 9; b++){
@@ -472,8 +473,8 @@ int main() {
   //     }
   //   }
   // }
-  
-//////////////////////////////////////////////
+
+  //////////////////////////////////////////////
   // int n, s = 0;
   // printf("Unesi n: \n"); scanf("%d", &n);
   // for (int i = 1; i <= n; i++)
@@ -481,7 +482,7 @@ int main() {
   //   s += faktorijel(i);
   // }
   // printf("Suma = %d", s);
-//////////////////////////////////////////////
+  //////////////////////////////////////////////
   // int n, k,c;
   // printf("Unesi n: \n");
   // scanf("%d", &n);
@@ -504,7 +505,7 @@ int main() {
   //   printf("Nzs = %d \n", nzs);
   //   printf("Nzd = %d \n", nzd);
   // }
-  
+
   ////////////////////////////////////////////
   // int donjaGranica, gornjaGranica;
   // printf("Donja granica: \n");
@@ -518,7 +519,7 @@ int main() {
   ////////////////////////////////////////////
   // int a,b;
   // printf("Unesi donju granicu a: \n"); scanf("%d", &a);
-  // printf("Unesi gornju granicu b: \n"); scanf("%d", &b);  
+  // printf("Unesi gornju granicu b: \n"); scanf("%d", &b);
   // printf(" Zbir kvadrata svih brojeva: %d \n", zbirKvadrata(a, b));
   // printf(" Zbir kvadrata parnih brojeva: %d \n", zbirParnihKvadrata(a, b));
   // printf(" Zbir kvadrata neparnih brojeva: %d", zbirNeparnihKvadrata(a, b));
@@ -529,7 +530,7 @@ int main() {
   //  printf("Drugo teme <xB,yB>: ");
   //  scanf("%lf %lf",&Xb,&Yb);
   //  printf("Trece teme <xC,yC>: ");
-  //  scanf("%lf %lf",&Xc,&Yc); 
+  //  scanf("%lf %lf",&Xc,&Yc);
   // a = stranica(Xb,Xc, Yb,Yc);
   // b = stranica(Xc,Xa, Yc,Ya);
   // c = stranica(Xa,Xb, Ya,Yb);
