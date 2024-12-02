@@ -4,44 +4,143 @@
 
 int main()
 {
-  int n, k = 0, m, A[MAX], B[MAX], C[MAX];
+  int n, A[MAX], B[MAX], zbir = 0;
   printf("Unesi n: \n");
   scanf("%d", &n);
-  printf("Unesi m: \n");
-  scanf("%d", &m);
   printf("Unesi elemente niza A: \n");
   for (int i = 0; i < n; i++)
   {
     scanf("%d", &A[i]);
+    zbir += A[i];
+    B[i] = zbir;
   }
-  printf("Unesi elemente niza B: \n");
-  for (int i = 0; i < m; i++)
-  {
-    scanf("%d", &B[i]);
-  }
-
-  printf("Elementi niza C: \n ");
+  printf("Elementi niza B: \n");
   for (int i = 0; i < n; i++)
   {
-    if (A[i] % 2 == 0)
-    {
-      C[k] = A[i];
-      k++;
-    }
+    printf("%d ", B[i]);
   }
-  for (int i = 0; i < m; i++)
-  {
-    if (B[i] % 2 == 0)
-    {
-      C[k] = B[i];
-      k++;
-    }
-  }
-  for (int i = 0; i < k; i++)
-  {
-    printf("%d \t", C[i]);
-  }
-  
+  ////////////////////////////////////////////////
+  // int n, A[MAX], B[MAX], j = 0, arSredina = 0, zbir = 0;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi elemente niza A: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &A[i]);
+  //   zbir += A[i];
+  // }
+  // arSredina = zbir / n;
+  // printf("Unesi elemente niza B: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   if (A[i] > arSredina)
+  //   {
+  //     B[j] = A[i];
+  //     printf("%d ", B[j]);
+  //     j++;
+  //   }
+  // }
+
+  ////////////////////////////////////////////////
+  // int n, A[MAX], B[MAX], C[MAX];
+  // int j = 0, k = 0;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi elemente niza A: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &A[i]);
+  //   if (A[i] < 0)
+  //   {
+  //     B[j] = A[i];
+  //     j++;
+  //   }
+  //   else
+  //   {
+  //     C[k] = A[i];
+  //     k++;
+  //   }
+  // }
+  // printf("Elementi niza B: ");
+  // for (int i = 0; i < j; i++)
+  // {
+  //   printf("%d ", B[i]);
+  // }
+  // printf("Elementi niza C: \n");
+  // for (int i = 0; i < k; i++)
+  // {
+  //   printf("%d ", C[i]);
+  // }
+
+  ////////////////////////////////////////////////
+  // int n, A[MAX], B[MAX], C[MAX];
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi elemente niza A: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &A[i]);
+  // }
+  // printf("Unesi elemente niza B: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &B[i]);
+  // }
+  // printf("Elementi niza C: \n ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   if (A[i] > B[i])
+  //   {
+  //     C[i] = B[i];
+  //   }
+  //   else if (B[i] > A[i])
+  //   {
+  //     C[i] = A[i];
+  //   }
+  //   else
+  //   {
+  //     C[i] = 0;
+  //   }
+  //   printf("%d", C[i]);
+  // }
+
+  ////////////////////////////////////////////////
+  // int n, k = 0, m, A[MAX], B[MAX], C[MAX];
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi m: \n");
+  // scanf("%d", &m);
+  // printf("Unesi elemente niza A: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &A[i]);
+  // }
+  // printf("Unesi elemente niza B: \n");
+  // for (int i = 0; i < m; i++)
+  // {
+  //   scanf("%d", &B[i]);
+  // }
+  // printf("Elementi niza C: \n ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   if (A[i] % 2 == 0)
+  //   {
+  //     C[k] = A[i];
+  //     k++;
+  //   }
+  // }
+  // for (int i = 0; i < m; i++)
+  // {
+  //   if (B[i] % 2 == 0)
+  //   {
+  //     C[k] = B[i];
+  //     k++;
+  //   }
+  // }
+  // for (int i = 0; i < k; i++)
+  // {
+  //   printf("%d \t", C[i]);
+  // }
 
   ////////////////////////////////////////////////
   // int max = 5, A[5], B[5], C[5];
