@@ -61,41 +61,113 @@
 //   }
 // }
 ////////////////////////////////////////////////
-int Pretrazivanje(int niz[], int n, int broj){
-  for (int i = 0; i < n; i++)
+// int Pretrazivanje(int niz[], int n, int broj){
+//   for (int i = 0; i < n; i++)
+//   {
+//     if (niz[i] == broj)
+//     {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+////////////////////////////////////////////////
+// void Rotiraj(int a[], int n)
+// {
+//   int pom;
+//   pom = a[0];
+//   for (int i = 1; i < n; i++)
+//   {
+//     a[i - 1] = a[i];
+//   }
+//   a[n - 1] = pom;
+// }
+////////////////////////////////////////////////
+void zamena(int niz[], int n)
+{
+  for (int i = 0; i < n; i+=2)
   {
-    if (niz[i] == broj)
-    {
-      return i;
-    }
+    int pomocna = niz[i];
+    niz[i] = niz[i + 1];
+    niz[i + 1] = pomocna;
   }
-  return -1;
 }
+
 int main()
 {
-  int n, niz[MAX], broj;
-  printf("Unesi n: \n");
+
+  int n, niz[MAX];
+  printf("Unesi duzinu niza: \n");
   scanf("%d", &n);
-  printf("Elementi niza: ");
+
+  printf("Unesi el. niza: \n");
   for (int i = 0; i < n; i++)
   {
     scanf("%d", &niz[i]);
   }
-  printf("Trazena vrednost: \n");
-  scanf("%d", &broj);
-  i = Pretrazivanje(niz,n,broj);
-  if (i == -1)
+  printf("Elementi niza: ");
+  for (int i = 0; i < n; i++)
   {
-    printf("Nema trazenog elementa u nizu.");
-  }else
-  {
-    printf("Vrednost %d se ponavlja %d u nizu.", broj, i+1)
+    printf("%d ", niz[i]);
   }
-  
-  
-  
+
+  zamena(niz, n);
+
+  printf("\nNovi niz: ");
+  for (int i = 0; i < n; i++)
+  {
+    printf("%d ", niz[i]);
+  }
+
   ////////////////////////////////////////////////
-  // int n; 
+  // int a[MAX], n, x;
+  // printf("Unesi duzinu n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi elemente niza: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &a[i]);
+  // }
+  // printf("Elementi niza: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   printf("%d ", a[i]);
+  // }
+
+  // printf("\nBroj mesta za pomeranje: \n");
+  // scanf("%d", &x);
+  // for (int i = 0; i < x; i++)
+  // {
+  //   Rotiraj(a, n);
+  // }
+  // printf("Rotirajuci niz za %d mesta je:  ", x);
+  // for (int i = 0; i < n; i++)
+  // {
+  //   printf("%d ", a[i]);
+  // }
+
+  ////////////////////////////////////////////////
+  // int n, niz[MAX], broj;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Elementi niza: ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &niz[i]);
+  // }
+  // printf("Trazena vrednost: \n");
+  // scanf("%d", &broj);
+  // i = Pretrazivanje(niz,n,broj);
+  // if (i == -1)
+  // {
+  //   printf("Nema trazenog elementa u nizu.");
+  // }else
+  // {
+  //   printf("Vrednost %d se ponavlja %d u nizu.", broj, i+1)
+  // }
+
+  ////////////////////////////////////////////////
+  // int n;
   // float niz[MAX], xmax, xmin, pozicijaMax;
   // printf("Unesi n: \n");
   // scanf("%d", &n);

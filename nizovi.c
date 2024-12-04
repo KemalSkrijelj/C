@@ -4,32 +4,149 @@
 
 int main()
 {
-  int n, niz[MAX], trazen = 0, trazeniBroj, brojPonavljanja = 0;
-  printf("Unesi duzinu niza: \n");
+  int i, j, n, pomocna, niz[MAX];
+  printf("Unesi n: \n");
   scanf("%d", &n);
-  printf("Elementi niza: \n");
-  for (int i = 0; i < n; i++)
+  printf("Unesi elemente: \n");
+  for (i = 0; i < n; i++)
   {
     scanf("%d", &niz[i]);
   }
-  printf("Unesi trazeni broj: \n");
-  scanf("%d", &trazeniBroj);
-  for (int i = 1; i < n; i++)
+  for (i = n - 1; i > 0; i--)
   {
-    if (niz[i] == trazeniBroj)
+    for (j = 0; j < i; j++)
     {
-      trazen = 1;
-      brojPonavljanja++;
+      if (niz[j] > niz[j + 1])
+      {
+        pomocna = niz[j];
+        niz[j] = niz[j + 1];
+        niz[j + 1] = pomocna;
+      }
     }
   }
-  if (trazen)
+  printf("Sortirani niz: ");
+  for (i = 0; i < n; i++)
   {
-    printf("Vrednost %d se nalazi u nizu %d puta", trazeniBroj, brojPonavljanja);
+    printf("%d ", niz[i]);
   }
-  else
-  {
-    printf("Vrednost se ne nalazi u nizu.");
-  }
+
+  ////////////////////////////////////////////////
+  // int i, j, n, pomocna, niz[MAX];
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Elementi niza: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d ", &niz[i]);
+  // }
+  // for (i = 0; i < n; i++)
+  // {
+  //   for (j = i + 1; j < n; j++)
+  //   {
+  //     if (niz[i] > niz[j])
+  //     {
+  //       pomocna = niz[i];
+  //       niz[i] = niz[j];
+  //       niz[j] = pomocna;
+  //     }
+  //   }
+  // }
+  // printf("Sortirani niz: \n");
+  // for (i = 0; i < n; i++)
+  // {
+  //   printf("%d ", niz[i]);
+  // }
+
+  ////////////////////////////////////////////////
+  // int n, niz[MAX], istiElementi;
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi elemente: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &niz[i]);
+  // }
+  // printf("Novi niza: ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   istiElementi = 0;
+  //   for (int j = 0; j < i; j++)
+  //   {
+  //     if (niz[i] == niz[j])
+  //     {
+  //       istiElementi = 1;
+  //       break;
+  //     }
+  //   }
+  //   if (!istiElementi)
+  //   {
+  //     printf("%d ", niz[i]);
+  //   }
+  // }
+
+  ////////////////////////////////////////////////
+  // int nizA[MAX], n, pom;
+  // printf("Unesi duzinu niza: \n");
+  // scanf("%d", &n);
+  // printf("Elementi niza A: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &nizA[i]);
+  // }
+  // pom = nizA[0];
+  // for (int i = 0; i < n - 1; i++)
+  // {
+  //   nizA[i] = nizA[i + 1];
+  // }
+  // nizA[n - 1] = pom;
+  // printf("Novi niz: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   printf("%d", nizA[i]);
+  // }
+
+  ////////////////////////////////////////////////
+  // int nizA[MAX], n;
+  // printf("Unesi duzinu niza: \n");
+  // scanf("%d", &n);
+  // printf("Elementi niza A: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &nizA[i]);
+  // }
+  // printf("Elementi niza B: \n");
+  // for (int i = n - 1; i >= 0; i--)
+  // {
+  //   printf("%d ", nizA[i]);
+  // }
+
+  ////////////////////////////////////////////////
+  // int n, niz[MAX], trazen = 0, trazeniBroj, brojPonavljanja = 0;
+  // printf("Unesi duzinu niza: \n");
+  // scanf("%d", &n);
+  // printf("Elementi niza: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &niz[i]);
+  // }
+  // printf("Unesi trazeni broj: \n");
+  // scanf("%d", &trazeniBroj);
+  // for (int i = 1; i < n; i++)
+  // {
+  //   if (niz[i] == trazeniBroj)
+  //   {
+  //     trazen = 1;
+  //     brojPonavljanja++;
+  //   }
+  // }
+  // if (trazen)
+  // {
+  //   printf("Vrednost %d se nalazi u nizu %d puta", trazeniBroj, brojPonavljanja);
+  // }
+  // else
+  // {
+  //   printf("Vrednost se ne nalazi u nizu.");
+  // }
 
   ////////////////////////////////////////////////
   // int n, niz[MAX], fibonacijev = true, max;
