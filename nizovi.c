@@ -4,31 +4,102 @@
 
 int main()
 {
-  int i, j, n, pomocna, niz[MAX];
-  printf("Unesi n: \n");
+
+  int n, pomocna, m, nizA[MAX], nizB[MAX], nizC[MAX];
+  printf("Unesi duzinu niza a: \n");
   scanf("%d", &n);
-  printf("Unesi elemente: \n");
-  for (i = 0; i < n; i++)
+  printf("Unesi duzinu niza b: \n");
+  scanf("%d", &m);
+  printf("Unesi elemente nizaA: \n");
+  for (int i = 0; i < n; i++)
   {
-    scanf("%d", &niz[i]);
+    scanf("%d", &nizA[i]);
   }
-  for (i = n - 1; i > 0; i--)
+  printf("Unesi elemente nizaB: \n");
+  for (int i = 0; i < m; i++)
   {
-    for (j = 0; j < i; j++)
+    scanf("%d", &nizB[i]);
+  }
+
+
+  for (int i = 0; i < n - 1; i++)
+  {
+    for (int j = 0; j < n-i-1; j++)
     {
-      if (niz[j] > niz[j + 1])
+      if (nizA[j] > nizA[j + 1])
       {
-        pomocna = niz[j];
-        niz[j] = niz[j + 1];
-        niz[j + 1] = pomocna;
+        pomocna = nizA[j];
+        nizA[j] = nizA[j + 1];
+        nizA[j + 1] = pomocna;
       }
     }
   }
-  printf("Sortirani niz: ");
-  for (i = 0; i < n; i++)
+  printf("Sortirani elementi niza A: ");
+  for (int i = 0; i < n; i++)
   {
-    printf("%d ", niz[i]);
+    printf("%d ", nizA[i]);
   }
+
+  ////////////////////////////////////////////////
+  // int i, j, n, b, pozicija, niz[MAX];
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi elemente: \n");
+  // for (i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &niz[i]);
+  // }
+  // printf("Element za dodavanje u niz: \n");
+  // scanf("%d", &b);
+
+  // pozicija = n;
+  // for (i = 0; i < n; i++)
+  // {
+  //   if (niz[i] > b)
+  //   {
+  //     pozicija = i;
+  //     break;
+  //   }
+  // }
+  // for (i = n - 1; i > 0; i--)
+  // {
+  //   niz[i] = niz[i - 1];
+  // }
+  // niz[pozicija] = b;
+  // n++;
+
+  // printf("Uredjeni niz: ");
+  // for (i = 0; i < n; i++)
+  // {
+  //   printf("%d ", niz[i]);
+  // }
+
+  ////////////////////////////////////////////////
+  // int i, j, n, pomocna, niz[MAX];
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+  // printf("Unesi elemente: \n");
+  // for (i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &niz[i]);
+  // }
+  // for (i = n - 1; i > 0; i--)
+  // {
+  //   for (j = 0; j < i; j++)
+  //   {
+  //     if (niz[j] > niz[j + 1])
+  //     {
+  //       pomocna = niz[j];
+  //       niz[j] = niz[j + 1];
+  //       niz[j + 1] = pomocna;
+  //     }
+  //   }
+  // }
+  // printf("Sortirani niz: ");
+  // for ( i = 0; i < n; i++)
+  // {
+  //   printf("%d ", niz[i]);
+  // }
 
   ////////////////////////////////////////////////
   // int i, j, n, pomocna, niz[MAX];
