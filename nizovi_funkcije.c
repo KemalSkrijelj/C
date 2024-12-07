@@ -83,41 +83,144 @@
 //   a[n - 1] = pom;
 // }
 ////////////////////////////////////////////////
-void zamena(int niz[], int n)
+// void zamena(int niz[], int n)
+// {
+//   for (int i = 0; i < n; i+=2)
+//   {
+//     int pomocna = niz[i];
+//     niz[i] = niz[i + 1];
+//     niz[i + 1] = pomocna;
+//   }
+// }
+////////////////////////////////////////////
+// void Sortiraj(int niz[], int n)
+// {
+//   int pomocna, min;
+//   for (int i = 0; i < n - 1; i++)
+//   {
+//     min = i;
+//     for (int j = i + 1; j < n; j++)
+//     {
+//       if (niz[j] < niz[min])
+//       {
+//         min = j;
+//       }
+//       if (min != i)
+//       {
+//         pomocna = niz[i];
+//         niz[i] = niz[min];
+//         niz[min] = pomocna;
+//       }
+//     }
+//   }
+// }
+////////////////////////////////////////
+// int Sortiranje(int niz[], int n)
+// {
+//   int pomocna;
+//   for (int i = 0; i < n - 1; i++)
+//   {
+//     for (int j = 0; j < n - i - 1; j++)
+//     {
+//       if (niz[j] < niz[j + 1])
+//       {
+//         pomocna = niz[j];
+//         niz[j] = niz[j + 1];
+//         niz[j + 1] = pomocna;
+//       }
+//     }
+//   }
+// }
+//////////////////////////////////////
+int Postojanje(int niz[], int n, int target)
 {
-  for (int i = 0; i < n; i+=2)
+  for (int i = 0; i < n; i++)
   {
-    int pomocna = niz[i];
-    niz[i] = niz[i + 1];
-    niz[i + 1] = pomocna;
+    for (int j = i + 1; j < n; j++)
+    {
+      if (niz[i] + niz[j] == target)
+      {
+        return 1;
+      }
+    }
   }
+  return 0;
 }
-
 int main()
 {
-
-  int n, niz[MAX];
-  printf("Unesi duzinu niza: \n");
+  int niz[MAX], n, target;
+  printf("Unesi duzinu niza n: \n");
   scanf("%d", &n);
 
-  printf("Unesi el. niza: \n");
+  printf("Unesi elemente niza: \n");
   for (int i = 0; i < n; i++)
   {
     scanf("%d", &niz[i]);
   }
-  printf("Elementi niza: ");
-  for (int i = 0; i < n; i++)
+  printf("Unesi trazen broj: \n");
+  scanf("%d", &target);
+  if (Postojanje(niz, n, target))
   {
-    printf("%d ", niz[i]);
+    printf("Postoji par elemenata ciji je zbir jedank %d", target);
+  }
+  else
+  {
+    printf("Ne postoji par elemenata ciji je zbir jedank %d", target);
   }
 
-  zamena(niz, n);
+  ////////////////////////////////////////////////
+  // int niz[MAX], n, brojac, duzina = -1, indeks = -1;
+  // printf("Broj elemenata u nizu:\n ");
+  // scanf("%d", &n);
+  // printf("Elemenati u nizu: ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &niz[i]);
+  // }
+  // Sortiraj(niz, n);
+  // printf("Sortiran niz: ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   printf("%d ", niz[i]);
+  // }
+  // for (int i = 0; i < n; i++)
+  // {
+  //   brojac = 1;
+  //   for (int j = i + 1; j < n && niz[j] == niz[i]; j++)
+  //   {
+  //     brojac++;
+  //   }
+  //   if (brojac > duzina)
+  //   {
+  //     duzina = brojac;
+  //     indeks = i;
+  //   }
+  // }
+  // printf("\nNajveci broj puta se javlja broj %d, ponavljanja: %d ", niz[indeks], duzina);
 
-  printf("\nNovi niz: ");
-  for (int i = 0; i < n; i++)
-  {
-    printf("%d ", niz[i]);
-  }
+  ////////////////////////////////////////////////
+  // int n, niz[MAX];
+  // printf("Unesi duzinu niza: \n");
+  // scanf("%d", &n);
+
+  // printf("Unesi el. niza: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &niz[i]);
+  // }
+  // printf("Elementi niza: ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   printf("%d ", niz[i]);
+  // }
+
+  // zamena(niz, n);
+
+  // printf("\nNovi niz: ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   printf("%d ", niz[i]);
+  // }
 
   ////////////////////////////////////////////////
   // int a[MAX], n, x;

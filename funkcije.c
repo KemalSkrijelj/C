@@ -52,34 +52,53 @@
 //   return s;
 // }
 ////////////////////////////////////////////
-int sumaKubova(int n)
+// int sumaKubova(int n)
+// {
+//   int s = 0;
+//   while (n != 0)
+//   {
+//     int cifra = n % 10;
+//     s += cifra * cifra * cifra;
+//     n /= 10;
+//   }
+//   return s;
+// }
+// int Amstrongov(int n)
+// {
+//   if (n == sumaKubova(n))
+//   {
+//     return n;
+//   }
+//   return 0;
+// }
+double Racunaj(int n)
 {
-  int s = 0;
-  while (n != 0)
+  if (n == 0)
   {
-    int cifra = n % 10;
-    s += cifra * cifra * cifra;
-    n /= 10;
+    return 0.0;
   }
-  return s;
-}
-int Amstrongov(int n)
-{
-  if (n == sumaKubova(n))
+  else if (n == 1)
   {
-    return n;
+    return 1.0;
   }
-  return 0;
+  double An = Racunaj(n - 1);
+  return (1.0 / An) - (( An + 3 ) /2.0);
 }
 int main()
 {
-  for (int i = 100; i <= 999; i++)
+  for (int i = 0; i < 20; i++)
   {
-    if (i == Amstrongov(i))
-    {
-      printf("%d \t", i);
-    }
+    printf("a_%d = %.2f \n", i, Racunaj(i));
   }
+
+  ////////////////////////////////////////
+  //   for (int i = 100; i <= 999; i++)
+  //   {
+  //     if (i == Amstrongov(i))
+  //     {
+  //       printf("%d \t", i);
+  //     }
+  //   }
   ////////////////////////////////////////////
   // int d, g;
   // printf("Unesi donju granicu: \n"); scanf("%d", &d);
