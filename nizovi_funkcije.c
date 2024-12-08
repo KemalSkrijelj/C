@@ -132,41 +132,81 @@
 //   }
 // }
 //////////////////////////////////////
-int Postojanje(int niz[], int n, int target)
-{
-  for (int i = 0; i < n; i++)
-  {
-    for (int j = i + 1; j < n; j++)
-    {
-      if (niz[i] + niz[j] == target)
-      {
-        return 1;
-      }
-    }
-  }
-  return 0;
-}
+// int Postojanje(int niz[], int n, int target)
+// {
+//   for (int i = 0; i < n; i++)
+//   {
+//     for (int j = i + 1; j < n; j++)
+//     {
+//       if (niz[i] + niz[j] == target)
+//       {
+//         return 1;
+//       }
+//     }
+//   }
+//   return 0;
+// }
+//////////////////////////////////////
+
 int main()
 {
-  int niz[MAX], n, target;
-  printf("Unesi duzinu niza n: \n");
+  int n, niz[MAX], pronadjen = 0;
+
+  printf("Unesi n: \n");
   scanf("%d", &n);
 
-  printf("Unesi elemente niza: \n");
+  printf("Unesi elemenete niza: \n");
   for (int i = 0; i < n; i++)
   {
     scanf("%d", &niz[i]);
   }
-  printf("Unesi trazen broj: \n");
-  scanf("%d", &target);
-  if (Postojanje(niz, n, target))
+
+  printf("Indeksi na kojima je niz usredjen: \n");
+
+  for (int i = 0; i < n; i++)
   {
-    printf("Postoji par elemenata ciji je zbir jedank %d", target);
+    int sumaLevo = 0;
+    int sumaDesno = 0;
+    for (int j = 0; j < i; j++)
+    {
+      sumaLevo += niz[j];
+    }
+    for (int k = i + 1; k < n; k++)
+    {
+      sumaDesno += niz[k];
+    }
+    printf("i=%d, sumaLevo=%d, sumaDesno=%d\n", i, sumaLevo, sumaDesno);
+    if (sumaLevo == sumaDesno)
+    {
+      printf("Niz na indeksu %d je usredjen \n", i);
+      pronadjen = 1;
+    }
   }
-  else
+  if (!pronadjen)
   {
-    printf("Ne postoji par elemenata ciji je zbir jedank %d", target);
+    printf("Nema usredjenih indeksa u nizu.");
   }
+
+  ////////////////////////////////////////////////
+  // int niz[MAX], n, target;
+  // printf("Unesi duzinu niza n: \n");
+  // scanf("%d", &n);
+
+  // printf("Unesi elemente niza: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   scanf("%d", &niz[i]);
+  // }
+  // printf("Unesi trazen broj: \n");
+  // scanf("%d", &target);
+  // if (Postojanje(niz, n, target))
+  // {
+  //   printf("Postoji par elemenata ciji je zbir jedank %d", target);
+  // }
+  // else
+  // {
+  //   printf("Ne postoji par elemenata ciji je zbir jedank %d", target);
+  // }
 
   ////////////////////////////////////////////////
   // int niz[MAX], n, brojac, duzina = -1, indeks = -1;

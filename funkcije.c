@@ -82,7 +82,7 @@ double Racunaj(int n)
     return 1.0;
   }
   double An = Racunaj(n - 1);
-  return (1.0 / An) - (( An + 3 ) /2.0);
+  return (1.0 / An) - ((An + 3) / 2.0);
 }
 int main()
 {
