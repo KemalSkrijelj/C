@@ -24,51 +24,105 @@ void ispisMatrice(int matrica[10][10], int vrsta, int kolona)
     printf("\n");
   }
 }
-int main()
+void automobiliKojiNisuPopravljeni(int matrica[10][10], int vrsta, int kolona)
 {
-  int n, matricaA[10][10], matricaB[10][10];
-  printf("Unesi n: \n");
-  scanf("%d", &n);
-
-  printf("Unesi el. matrice: \n");
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i < vrsta; i++)
   {
-    for (int j = 0; j < n; j++)
+    int popravljen = 1;
+    for (int j = 0; j < kolona; j++)
     {
-      printf("[%d][%d]: ", i, j);
-      scanf("%d", &matricaA[i][j]);
-    }
-  }
-  printf("Matrica: \n");
-  for (int i = 0; i < n; i++)
-  {
-    for (int j = 0; j < n; j++)
-    {
-      printf("%d \t", matricaA[i][j]);
-    }
-    printf("\n");
-  }
-
-  for (int i = 0; i < n; i++)
-  {
-    for (int j = 0; j < n; j++)
-    {
-      matricaB[i][j] = 0;
-      for (int k = 0; k < n; k++)
+      if (matrica[i][j] == 2)
       {
-        matricaB[i][j] += matricaA[i][k] * matricaA[k][j];
+        popravljen = 0;
+        break;
       }
     }
-  }
-  printf("Matrica B: \n");
-  for (int i = 0; i < n; i++)
-  {
-    for (int j = 0; j < n; j++)
+    if (popravljen == 0)
     {
-      printf("%d \t", matricaB[i][j]);
+      printf("\nAutomobil %d nije popravljen u potpunosti.", i + 1);
     }
-    printf("\n");
   }
+}
+void najcescijiKvar(int matrica[10][10], int vrsta, int kolona)
+{
+  int maxKvarova = 0, jmax = -1, brojac;
+  for (int j = 0; j < kolona; j++)
+  {
+    brojac = 0;
+    for (int i = 0; i < vrsta; i++)
+    {
+      if (matrica[i][j] > 0)
+      {
+        brojac++;
+      }
+    }
+    if (brojac > maxKvarova)
+    {
+      maxKvarova = brojac;
+      jmax = j;
+    }
+  }
+  printf("\nNajcesciji kvar je %d i on se pojavio %d puta ", jmax + 1, maxKvarova);
+}
+int main()
+{
+  int vrsta, kolona, matrica[10][10];
+  printf("Unesi vrstu: \n");
+  scanf("%d", &vrsta);
+  printf("Unesi kolonu: \n");
+  scanf("%d", &kolona);
+  printf("Unesi matricu: \n");
+  unosMatrice(matrica, vrsta, kolona);
+  printf("Ispis matrice: \n");
+  ispisMatrice(matrica, vrsta, kolona);
+  printf("Automobili koji nisu popravljeni: \n");
+  automobiliKojiNisuPopravljeni(matrica, vrsta, kolona);
+  najcescijiKvar(matrica, vrsta, kolona);
+
+  /////////////////////////////////////////////////////
+  // int n, matricaA[10][10], matricaB[10][10];
+  // printf("Unesi n: \n");
+  // scanf("%d", &n);
+
+  // printf("Unesi el. matrice: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   for (int j = 0; j < n; j++)
+  //   {
+  //     printf("[%d][%d]: ", i, j);
+  //     scanf("%d", &matricaA[i][j]);
+  //   }
+  // }
+  // printf("Matrica: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   for (int j = 0; j < n; j++)
+  //   {
+  //     printf("%d \t", matricaA[i][j]);
+  //   }
+  //   printf("\n");
+  // }
+
+  // for (int i = 0; i < n; i++)
+  // {
+  //   for (int j = 0; j < n; j++)
+  //   {
+  //     matricaB[i][j] = 0;
+  //     for (int k = 0; k < n; k++)
+  //     {
+  //       matricaB[i][j] += matricaA[i][k] * matricaA[k][j];
+  //     }
+  //   }
+  // }
+  // printf("Matrica B: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   for (int j = 0; j < n; j++)
+  //   {
+  //     printf("%d \t", matricaB[i][j]);
+  //   }
+  //   printf("\n");
+  // }
 
   /////////////////////////////////////////////////////
   // int n, matrica[10][10], pomocna, maxv[MAX], minv[MAX], maxk[MAX], mink[MAX];
