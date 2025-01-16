@@ -50,30 +50,36 @@
 //   s1[i] = '\0';
 // }
 ////////////////////////////////////
-void Ukloni(char s[], char c)
-{
-  int i, j = 0;
-  for (i = 0; s[i] != '\0'; i++)
-  {
-    if (s[i] != c)
-    {
-      s[j] = s[i];
-      j++;
-    }
-  }
-  s[j] = '\0';
-}
+// void Ukloni(char s[], char c)
+// {
+//   int i, j = 0;
+//   for (i = 0; s[i] != '\0'; i++)
+//   {
+//     if (s[i] != c)
+//     {
+//       s[j] = s[i];
+//       j++;
+//     }
+//   }
+//   s[j] = '\0';
+// }
+
+////////////////////////////////////
+
 int main()
 {
-  char s[MAX];
-  char c;
-  printf("Unesi string: ");
-  gets(s);
-  printf("Unesi zeljeni karakter: ");
-  scanf("%c", &c);
-  Ukloni(s, c);
-  printf("\n Novi niz: %s", s);
   /////////////////////////////////
+
+  // char s[MAX];
+  // char c;
+  // printf("Unesi string: ");
+  // gets(s);
+  // printf("Unesi zeljeni karakter: ");
+  // scanf("%c", &c);
+  // Ukloni(s, c);
+  // printf("\n Novi niz: %s", s);
+
+  // /////////////////////////////////
   // char s1[MAX], s2[MAX];
   // printf("Unesi prvi string: ");
   // fgets(s1,MAX, stdin);
@@ -531,6 +537,149 @@ int main()
   // }
 
   /////////////////////////////////
+
+  // char s[MAX];
+  // int n;
+  // printf("Unesi string: ");
+  // gets(s);
+  // n = strlen(s);
+  // printf("Novi string: ");
+  // for (int i = n; i >= 0; i--)
+  // {
+  //   printf("%c", s[i]);
+  // }
+
+  /////////////////////////////////
+
+  // char pomocna, s[MAX];
+  // int n;
+  // printf("Unesi string: ");
+  // gets(s);
+  // n = strlen(s);
+  // pomocna = s[0];
+  // for (int i = 0; i < n; i++)
+  // {
+  //   s[i] = s[i+1];
+  // }
+  // s[n-1] = pomocna;
+  // printf("Pomereni string: ");
+  // puts(s);
+
+  /////////////////////////////////
+
+  // char pomocna[MAX], spisak[10][10];
+  // int n;
+  // printf("Unesite n: ");
+  // scanf("%d", &n);
+  // getchar();
+  // printf("Spisak: \n");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   gets(spisak[i]);
+  // }
+  // strcpy(pomocna, spisak[0]);
+  // for (int i = 0; i < n - 1; i++)
+  // {
+  //   strcpy(spisak[i], spisak[i + 1]);
+  // }
+  // strcpy(spisak[n - 1], pomocna);
+  // printf("Novi spisak: ");
+  // for (int i = 0; i < n; i++)
+  // {
+  //   puts(spisak[i]);
+  // }
+
+  /////////////////////////////////
+
+  // char rec[MAX];
+  // int n, k = 0;
+  // printf("Unesi rec: ");
+  // gets(rec);
+  // n = strlen(rec);
+  // for (int i = 0; i < n; i++)
+  // {
+  //   if (rec[i] != rec[n-i-1])
+  //   {
+  //     k = 1;
+  //   }
+  // }
+  // if (k == 0)
+  // {
+  //   printf("Rec je palindrom.");
+  // }else
+  // {
+  //   printf("Rec nije palindrom.");
+  // }
+
+  /////////////////////////////////
+  // char s[MAX];
+  // int n, brojac = 0, k = 0;
+  // printf("Unesi string: ");
+  // gets(s);
+  // n = strlen(s);
+  // for (int i = 0; i < n; i++)
+  // {
+  //   if (s[i] == ' ')
+  //   {
+  //     brojac++;
+  //   }
+  // }
+
+  // for (int i = 0; i < brojac; i++)
+  // {
+  //   for (int j = 0; j < n; j++)
+  //   {
+  //     if (s[i] == ' ')
+  //     {
+  //       s[j] = s[j + 1];
+  //       s[j + 1] = ' ';
+  //     }
+  //   }
+  // }
+  // for (int i = 0; i < n; i++)
+  // {
+  //   if (s[i] == s[i - 1])
+  //   {
+  //     k = 1;
+  //   }
+  // }
+  // if (k == 1)
+  // {
+  //   printf("Rec je palindrom.");
+  // }
+  // else
+  // {
+  //   printf("Rec nije palindom.");
+  // }
+
+  /////////////////////////////////
+  int n;
+  char pomocna[MAX], spisak[10][10];
+  printf("Unesi broj imena: ");
+  scanf("%d", &n);
+  getchar();
+  printf("Spisak imena: \n");
+  for (int i = 0; i < n; i++)
+  {
+    gets(spisak[i]);
+  }
+  for (int i = 0; i < n - 1; i++)
+  {
+    for (int j = i + 1; j < n; j++)
+    {
+      if (strcmp(spisak[i], spisak[j]) > 0)
+      {
+        strcpy(pomocna, spisak[i]);
+        strcpy(spisak[i], spisak[j]);
+        strcpy(spisak[j], pomocna);
+      }
+    }
+  }
+  printf("Sortirana imena: ");
+  for (int i = 0; i < n; i++)
+  {
+    puts(spisak[i]);
+  }
 
   return 0;
 }
