@@ -250,29 +250,186 @@ int main()
 
   ///////////////////////////////////////////////
 
-  int m, n, pomocna;
-  float s = 0, koren;
-  printf("Unesi m i n: ");
-  while (m < 1 || n < 1)
-  {
-    scanf("%d %d", m, n);
-  }
-  if (n < m)
-  {
-    pomocna = n;
-    n = m;
-    m = pomocna;
-  }
-  if (m % 2 == 0)
-  {
-    m++;
-  }
-  for (int i = m; i <= n; i++)
-  {
-    koren = sqrt(i);
-    s += koren;
-  }
-  printf("\n Suma korena je %.3f\n", s);
+  // int m, n, pomocna;
+  // float s = 0, koren;
+  // printf("Unesi m i n: ");
+  // while (m < 1 || n < 1)
+  // {
+  //   scanf("%d %d", m, n);
+  // }
+  // if (n < m)
+  // {
+  //   pomocna = n;
+  //   n = m;
+  //   m = pomocna;
+  // }
+  // if (m % 2 == 0)
+  // {
+  //   m++;
+  // }
+  // for (int i = m; i <= n; i++)
+  // {
+  //   koren = sqrt(i);
+  //   s += koren;
+  // }
+  // printf("\n Suma korena je %.3f\n", s);
 
+  ///////////////////////////////////////////////
+
+  // int r;
+  // double p, z;
+  // printf("Unesi poluprecnik r: ");
+  // scanf("%d", &r);
+  // p = 4*r*r
+
+  ///////////////////////////////////////////////
+
+  // int n, sumaCifra = 0;
+  // printf("Unesi n: ");
+  // scanf("%d", &n);
+  // while (n != 0)
+  // {
+  //   sumaCifra += n % 10;
+  //   n = n / 10;
+  // }
+  // if (n % sumaCifra == 0)
+  // {
+  //   printf("Nivenov broj");
+  // }
+  // else
+  // {
+  //   printf("Nije Nivenov broj");
+  // }
+
+  ///////////////////////////////////////////////
+
+  // int zbirCifara, broj;
+  // printf("Amstrongovi brojevi: ");
+  // for (int a = 1; a <= 9; a++)
+  // {
+  //   for (int b = 1; b <= 9; b++)
+  //   {
+  //     for (int c = 1; c <= 9; c++)
+  //     {
+  //       broj = 100 * a + 10 * b + c;
+  //       if (broj == pow(a, 3) + pow(b, 3) + pow(c, 3))
+  //       {
+  //         printf("\nAmstronogv broj: %d", broj);
+  //       }
+  //     }
+  //   }
+  // }
+
+  ///////////////////////////////////////////////
+
+  // int n, suma = 0;
+  // printf("Unesi n: ");
+  // scanf("%d", &n);
+  // for (int i = 1; i < n; i++)
+  // {
+  //   if (n % i == 0)
+  //   {
+  //     suma += i;
+  //   }
+  // }
+  // if (suma == n)
+  // {
+  //   printf("Broj je savrsen.");
+  // }
+  // else
+  // {
+  //   printf("Broj nije savrsen.");
+  // }
+
+  ///////////////////////////////////////////////
+
+  // int n, sumaCifara = 0;
+  // int x, y, z;
+  // printf("Unesi n: ");
+  // scanf("%d", &n);
+  // while (n < 100 || n > 999)
+  // {
+  //   printf("Unesi n: ");
+  //   scanf("%d", &n);
+  // }
+
+  // x = n / 100;
+  // y = (n / 10) % 10;
+  // z = n % 10;
+  // sumaCifara = x + y + z;
+  // printf("Suma cifara je %d", sumaCifara);
+
+  ///////////////////////////////////////////////
+
+  // int a, b, c, broj;
+  // for (int a = 1; a <= 9; a++)
+  // {
+  //   for (int b = 1; b < 9; b++)
+  //   {
+  //     for (int c = 1; c < 9; c++)
+  //     {
+  //       broj = a * 100 + b * 10 + c;
+  //       if (broj == ((10 * a + b) * (10 * a + b) - pow(c, 2)))
+  //       {
+  //         printf("Broj: %d", broj);
+  //       }
+  //     }
+  //   }
+  // }
+
+  ///////////////////////////////////////////////
+
+  // int a, b, c, broj, dvocifren;
+  // for (a = 1; a <= 9; a++)
+  // {
+  //   for (b = 0; b < 9; b++)
+  //   {
+  //     for (c = 0; c < 9; c++)
+  //     {
+  //       broj = a * 100 + b * 10 + c;
+  //       dvocifren = a * 10 + c;
+  //       if (broj % dvocifren == 0)
+  //       {
+  //         printf("%d, ", broj);
+  //       }
+  //     }
+  //   }
+  // }
+
+  ///////////////////////////////////////////////
+
+  // int a, b, c, broj, suma = 0, brojac = 0;
+  // for (a = 1; a <= 9; a++)
+  // {
+  //   for (b = 0; b < 9; b++)
+  //   {
+  //     for (c = 0; c < 9; c++)
+  //     {
+  //       broj = a * 100 + b * 10 + c;
+  //       if (a + b + c == 5)
+  //       {
+  //         suma += broj;
+  //         brojac++;
+  //       }
+  //     }
+  //   }
+  // }
+  // printf("\nSuma takvih brojeva %d", suma);
+  // printf("Broj takvih brojeva %d", brojac);
+
+  ///////////////////////////////////////////////
+
+  int suma = 0, brojac = 0;
+  for (int i = 100; i <= 999; i++)
+  {
+    if (i % 64 == 0)
+    {
+      brojac++;
+      suma += i;
+    }
+  }
+  printf("Suma brojeva: %d", suma);
+  printf("\nBroj takvih  brojeva: %d", brojac);
+  
   return 0;
 }
